@@ -28,4 +28,4 @@ RUN apt-get update \
   && mktexlsr \
   && updmap-sys
 
-CMD ["R --no-save --no-restore"]
+CMD ["R", "--no-save", "--no-restore"]
