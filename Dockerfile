@@ -27,3 +27,5 @@ RUN apt-get update \
   && echo "Map zi4.map" >> /usr/share/texlive/texmf-dist/web2c/updmap.cfg \
   && mktexlsr \
   && updmap-sys
+
+CMD ["R --no-save --no-restore"]
