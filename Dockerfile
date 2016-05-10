@@ -196,7 +196,7 @@ RUN wget https://github.com/cran/yaml/archive/2.1.13.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/evaluate_0.9.tar.gz \
   && R CMD INSTALL evaluate_0.9.tar.gz \
   && rm evaluate_0.9.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/formatR_1.3.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/formatR/formatR_1.3.tar.gz \
   && R CMD INSTALL formatR_1.3.tar.gz \
   && rm formatR_1.3.tar.gz \
   && wget https://github.com/cran/highr/archive/0.5.1.tar.gz \
