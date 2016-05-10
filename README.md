@@ -3,25 +3,25 @@ A stable Docker image with R. The version of most software is hard-coded.
 
 | Available software | Version        |
 | ------------------ | -------------- |
-|             Ubuntu |          16.04 |
+|             Ubuntu |        14.04.3 |
 |            TexLive |  2015.20160330 |
 |             Pandoc |       1.17.0.2 |
 |               qpdf |          6.0.0 |
-|                  R |          3.3.0 | 
+|                  R |          3.2.3 | 
 |         KernSmooth |        2.23-15 | 
-|               MASS |         7.3-45 | 
-|             Matrix |          1.2-6 | 
-|               boot |         1.3-18 | 
+|               MASS |         7.3-44 | 
+|             Matrix |          1.2-4 | 
+|               boot |         1.3-17 | 
 |              class |         7.3-14 | 
-|            cluster |          2.0.4 | 
+|            cluster |          2.0.3 | 
 |          codetools |         0.2-14 | 
 |            foreign |         0.8-66 | 
 |            lattice |        0.20-33 | 
 |               mgcv |         1.8-12 | 
-|               nlme |        3.1-127 | 
+|               nlme |        3.1-125 | 
 |               nnet |         7.3-12 | 
 |              rpart |         4.1-10 | 
-|            spatial |         7.3-11 | 
+|            spatial |         7.3-10 | 
 |           survival |         2.39-2 | 
 |                 BB |      2014.10-1 | 
 |                 BH |       1.60.0-2 | 
