@@ -58,7 +58,7 @@ RUN apt-get update \
     libssl-dev \
     libssh2-1-dev \
   && apt-get clean \
-  && wget https://cran.rstudio.com/src/contrib/jsonlite_0.9.19.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/jsonlite/jsonlite_0.9.19.tar.gz \
   && R CMD INSTALL jsonlite_0.9.19.tar.gz \
   && rm jsonlite_0.9.19.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/mime_0.4.tar.gz \
