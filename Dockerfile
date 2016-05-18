@@ -88,7 +88,7 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/httr_1.1.0.tar.gz \
   && R CMD INSTALL httr_1.1.0.tar.gz \
   && rm httr_1.1.0.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/git2r_0.14.0.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/git2r/git2r_0.14.0.tar.gz \
   && R CMD INSTALL git2r_0.14.0.tar.gz  \
   && rm git2r_0.14.0.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/memoise_1.0.0.tar.gz \
@@ -116,7 +116,7 @@ RUN wget https://cran.rstudio.com/src/contrib/assertthat_0.1.tar.gz \
   && rm assertthat_0.1.tar.gz
 
 ## Install dplyr and dependencies
-RUN wget https://cran.rstudio.com/src/contrib/Rcpp_0.12.4.tar.gz \
+RUN wget https://cran.rstudio.com/src/contrib/Archive/Rcpp/Rcpp_0.12.4.tar.gz \
   && R CMD INSTALL Rcpp_0.12.4.tar.gz \
   && rm Rcpp_0.12.4.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/lazyeval_0.1.10.tar.gz\
@@ -379,6 +379,11 @@ RUN wget https://github.com/cran/brew/archive/1.0-6.tar.gz \
 RUN wget https://github.com/cran/RSQLite/archive/1.0.0.tar.gz \
   && R CMD INSTALL 1.0.0.tar.gz \
   && rm 1.0.0.tar.gz
+
+## install rmvtnorm
+RUN wget https://cran.rstudio.com/src/contrib/mvtnorm_1.0-5.tar.gz \
+  && R CMD INSTALL mvtnorm_1.0-5.tar.gz \
+  && rm mvtnorm_1.0-5.tar.gz
 
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]
