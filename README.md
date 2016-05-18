@@ -76,6 +76,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |               mime |            0.4 | 
 |              minqa |          1.2.4 | 
 |            munsell |          0.4.3 | 
+|            mvtnorm |          1.0-5 | 
 |             nloptr |          1.0.4 | 
 |           numDeriv |       2014.2-1 | 
 |            openssl |          0.9.3 | 
