@@ -72,6 +72,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |          lubridate |          1.5.6 | 
 |           magrittr |            1.5 | 
 |           markdown |          0.7.7 | 
+|            mvtnorm |          1.0-5 |
 |            memoise |          1.0.0 | 
 |               mime |            0.4 | 
 |              minqa |          1.2.4 | 

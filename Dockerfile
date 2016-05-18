@@ -380,5 +380,10 @@ RUN wget https://github.com/cran/RSQLite/archive/1.0.0.tar.gz \
   && R CMD INSTALL 1.0.0.tar.gz \
   && rm 1.0.0.tar.gz
 
+## install rmvtnorm
+RUN wget https://cran.rstudio.com/src/contrib/mvtnorm_1.0-5.tar.gz \
+  && R CMD INSTALL mvtnorm_1.0-5.tar.gz \
+  && rm mvtnorm_1.0-5.tar.gz
+
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]
