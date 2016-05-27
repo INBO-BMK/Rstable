@@ -107,3 +107,4 @@ A stable Docker image with R. The version of most software is hard-coded.
 |              withr |          1.0.1 | 
 |             xtable |          1.8-2 | 
 |               yaml |         2.1.13 | 
+
