@@ -147,7 +147,7 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     freetds-dev \
     freetds-bin \
-    tdsodbc
+    tdsodbc \
   && apt-get clean
 
 ## Install RODBC and dependencies
