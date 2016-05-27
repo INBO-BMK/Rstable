@@ -21,6 +21,29 @@ RUN sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/a
   && gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9 \
   && gpg -a --export E084DAB9 | apt-key add -
 
+## Install R base
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    r-base-core=3.2.3-6trusty0 \
+    r-base-dev=3.2.3-6trusty0 \
+    r-cran-boot=1.3-17-1trusty0 \
+    r-cran-class=7.3-14-1trusty0 \
+    r-cran-cluster=2.0.3-1trusty0 \
+    r-cran-codetools=0.2-14-1~ubuntu14.04.1~ppa1 \
+    r-cran-foreign=0.8.66-1trusty0 \
+    r-cran-kernsmooth=2.23-15-1trusty0 \
+    r-cran-lattice=0.20-33-1trusty0 \
+    r-cran-matrix=1.2-4-1trusty0 \
+    r-cran-mgcv=1.8-12-1cran1trusty0 \
+    r-cran-nlme=3.1.125-1trusty0 \
+    r-cran-nnet=7.3-12-1trusty0 \
+    r-cran-mass=7.3-44-1trusty0 \
+    r-cran-rpart=4.1-10-1trusty0 \
+    r-cran-spatial=7.3-10-1trusty0 \
+    r-cran-survival=2.39-2-1cran1trusty0 \
+    r-recommended=3.2.3-6trusty0 \
+  && apt-get clean
+
 ## Install wget
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
@@ -50,29 +73,6 @@ RUN apt-get update \
 RUN wget https://github.com/jgm/pandoc/releases/download/1.17.0.2/pandoc-1.17.0.2-1-amd64.deb \
   && dpkg -i pandoc-1.17.0.2-1-amd64.deb \
   && rm pandoc-1.17.0.2-1-amd64.deb
-
-## Install R base
-RUN apt-get update \
-  && apt-get install -y --no-install-recommends \
-    r-base-core=3.2.3-6trusty0 \
-    r-base-dev=3.2.3-6trusty0 \
-    r-cran-boot=1.3-17-1trusty0 \
-    r-cran-class=7.3-14-1trusty0 \
-    r-cran-cluster=2.0.3-1trusty0 \
-    r-cran-codetools=0.2-14-1~ubuntu14.04.1~ppa1 \
-    r-cran-foreign=0.8.66-1trusty0 \
-    r-cran-kernsmooth=2.23-15-1trusty0 \
-    r-cran-lattice=0.20-33-1trusty0 \
-    r-cran-matrix=1.2-4-1trusty0 \
-    r-cran-mgcv=1.8-12-1cran1trusty0 \
-    r-cran-nlme=3.1.125-1trusty0 \
-    r-cran-nnet=7.3-12-1trusty0 \
-    r-cran-mass=7.3-44-1trusty0 \
-    r-cran-rpart=4.1-10-1trusty0 \
-    r-cran-spatial=7.3-10-1trusty0 \
-    r-cran-survival=2.39-2-1cran1trusty0 \
-    r-recommended=3.2.3-6trusty0 \
-  && apt-get clean
 
 ## Install devtools and dependencies
 RUN apt-get update \
