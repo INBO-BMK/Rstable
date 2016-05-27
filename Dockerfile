@@ -142,6 +142,14 @@ RUN wget https://cran.rstudio.com/src/contrib/lubridate_1.5.6.tar.gz \
   && R CMD INSTALL lubridate_1.5.6.tar.gz \
   && rm lubridate_1.5.6.tar.gz
 
+## Install freetds
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    freetds-dev \
+    freetds-bin \
+    tdsodbc
+  && apt-get clean
+
 ## Install RODBC and dependencies
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
