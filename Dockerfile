@@ -82,7 +82,7 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/stringr_1.0.0.tar.gz \
   && R CMD INSTALL stringr_1.0.0.tar.gz \
   && rm stringr_1.0.0.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/openssl_0.9.3.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/openssl/openssl_0.9.3.tar.gz \
   && R CMD INSTALL openssl_0.9.3.tar.gz \
   && rm openssl_0.9.3.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/httr_1.1.0.tar.gz \
@@ -107,8 +107,8 @@ RUN apt-get update \
   && R CMD INSTALL devtools_1.11.1.tar.gz \
   && rm devtools_1.11.1.tar.gz
 
-## Install digest 0.6.9.2 from Github
-RUN Rscript -e 'devtools::install_github("eddelbuettel/digest", ref = "59f3d16a3305549a3252999f5de8bb75c7e2c6e7", upgrade_dependencies = FALSE)'
+## Install digest 0.6.9.3 from Github
+RUN Rscript -e 'devtools::install_github("eddelbuettel/digest", ref = "fcbb3315450b9c1bf7121efd69bec605ce57fb51", upgrade_dependencies = FALSE)'
 
 ## Install assertthat
 RUN wget https://cran.rstudio.com/src/contrib/assertthat_0.1.tar.gz \
