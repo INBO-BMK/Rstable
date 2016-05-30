@@ -50,6 +50,30 @@ RUN apt-get update \
     wget \
   && apt-get clean
 
+## Add minimal LaTeX configuration
+## Taken from https://github.com/rocker-org/hadleyverse/blob/master/Dockerfile
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    lmodern \
+    qpdf \
+    texlive-fonts-recommended \
+    texlive-humanities \
+    texlive-latex-extra \
+    texinfo \
+  && apt-get clean \
+  && cd /usr/share/texlive/texmf-dist \
+  && wget http://mirrors.ctan.org/install/fonts/inconsolata.tds.zip \
+  && unzip inconsolata.tds.zip \
+  && rm inconsolata.tds.zip \
+  && echo "Map zi4.map" >> /usr/share/texlive/texmf-dist/web2c/updmap.cfg \
+  && mktexlsr \
+  && updmap-sys
+
+## Install pandoc
+RUN wget https://github.com/jgm/pandoc/releases/download/1.17.0.2/pandoc-1.17.0.2-1-amd64.deb \
+  && dpkg -i pandoc-1.17.0.2-1-amd64.deb \
+  && rm pandoc-1.17.0.2-1-amd64.deb
+
 ## Install devtools and dependencies
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
@@ -76,7 +100,7 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/magrittr_1.5.tar.gz \
   && R CMD INSTALL magrittr_1.5.tar.gz \
   && rm magrittr_1.5.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/stringi_1.0-1.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/stringi/stringi_1.0-1.tar.gz \
   && R CMD INSTALL stringi_1.0-1.tar.gz \
   && rm stringi_1.0-1.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/stringr_1.0.0.tar.gz \
@@ -142,6 +166,14 @@ RUN wget https://cran.rstudio.com/src/contrib/lubridate_1.5.6.tar.gz \
   && R CMD INSTALL lubridate_1.5.6.tar.gz \
   && rm lubridate_1.5.6.tar.gz
 
+## Install freetds
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    freetds-dev \
+    freetds-bin \
+    tdsodbc \
+  && apt-get clean
+
 ## Install RODBC and dependencies
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
@@ -164,30 +196,6 @@ RUN wget https://cran.rstudio.com/src/contrib/crayon_1.3.1.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/testthat_1.0.2.tar.gz \
   && R CMD INSTALL testthat_1.0.2.tar.gz \
   && rm testthat_1.0.2.tar.gz
-
-## Add minimal LaTeX configuration
-## Taken from https://github.com/rocker-org/hadleyverse/blob/master/Dockerfile
-RUN apt-get update \
-  && apt-get install -y --no-install-recommends \
-    lmodern \
-    qpdf \
-    texlive-fonts-recommended \
-    texlive-humanities \
-    texlive-latex-extra \
-    texinfo \
-  && apt-get clean \
-  && cd /usr/share/texlive/texmf-dist \
-  && wget http://mirrors.ctan.org/install/fonts/inconsolata.tds.zip \
-  && unzip inconsolata.tds.zip \
-  && rm inconsolata.tds.zip \
-  && echo "Map zi4.map" >> /usr/share/texlive/texmf-dist/web2c/updmap.cfg \
-  && mktexlsr \
-  && updmap-sys
-
-## Install pandoc
-RUN wget https://github.com/jgm/pandoc/releases/download/1.17.0.2/pandoc-1.17.0.2-1-amd64.deb \
-  && dpkg -i pandoc-1.17.0.2-1-amd64.deb \
-  && rm pandoc-1.17.0.2-1-amd64.deb
 
 ## Install rmarkdown and dependencies
 RUN wget https://github.com/cran/yaml/archive/2.1.13.tar.gz \
