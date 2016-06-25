@@ -233,7 +233,7 @@ RUN wget https://github.com/cran/yaml/archive/2.1.13.tar.gz \
 RUN wget https://cran.rstudio.com/src/contrib/rex_1.1.1.tar.gz \
   && R CMD INSTALL rex_1.1.1.tar.gz \
   && rm rex_1.1.1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/covr_2.0.1.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/covr/covr_2.0.1.tar.gz \
   && R CMD INSTALL covr_2.0.1.tar.gz \
   && rm covr_2.0.1.tar.gz
 
