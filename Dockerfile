@@ -109,7 +109,7 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/Archive/openssl/openssl_0.9.3.tar.gz \
   && R CMD INSTALL openssl_0.9.3.tar.gz \
   && rm openssl_0.9.3.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/httr_1.1.0.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/httr/httr_1.1.0.tar.gz \
   && R CMD INSTALL httr_1.1.0.tar.gz \
   && rm httr_1.1.0.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/Archive/git2r/git2r_0.14.0.tar.gz \
@@ -124,10 +124,10 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/rstudioapi_0.5.tar.gz \
   && R CMD INSTALL rstudioapi_0.5.tar.gz \
   && rm rstudioapi_0.5.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/withr_1.0.1.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/withr/withr_1.0.1.tar.gz \
   && R CMD INSTALL withr_1.0.1.tar.gz \
   && rm withr_1.0.1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/devtools_1.11.1.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/devtools/devtools_1.11.1.tar.gz \
   && R CMD INSTALL devtools_1.11.1.tar.gz \
   && rm devtools_1.11.1.tar.gz
 
@@ -143,7 +143,7 @@ RUN wget https://cran.rstudio.com/src/contrib/assertthat_0.1.tar.gz \
 RUN wget https://cran.rstudio.com/src/contrib/Archive/Rcpp/Rcpp_0.12.4.tar.gz \
   && R CMD INSTALL Rcpp_0.12.4.tar.gz \
   && rm Rcpp_0.12.4.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/lazyeval_0.1.10.tar.gz\
+  && wget https://cran.rstudio.com/src/contrib/Archive/lazyeval/lazyeval_0.1.10.tar.gz\
   && R CMD INSTALL lazyeval_0.1.10.tar.gz \
   && rm lazyeval_0.1.10.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/DBI_0.4-1.tar.gz \
@@ -152,7 +152,7 @@ RUN wget https://cran.rstudio.com/src/contrib/Archive/Rcpp/Rcpp_0.12.4.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/BH_1.60.0-2.tar.gz \
   && R CMD INSTALL BH_1.60.0-2.tar.gz \
   && rm BH_1.60.0-2.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/dplyr_0.4.3.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/dplyr/dplyr_0.4.3.tar.gz \
   && R CMD INSTALL dplyr_0.4.3.tar.gz \
   && rm dplyr_0.4.3.tar.gz
 
@@ -225,7 +225,7 @@ RUN wget https://github.com/cran/yaml/archive/2.1.13.tar.gz \
 RUN wget https://cran.rstudio.com/src/contrib/rex_1.1.1.tar.gz \
   && R CMD INSTALL rex_1.1.1.tar.gz \
   && rm rex_1.1.1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/covr_2.0.1.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/covr/covr_2.0.1.tar.gz \
   && R CMD INSTALL covr_2.0.1.tar.gz \
   && rm covr_2.0.1.tar.gz
 
