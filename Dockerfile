@@ -217,7 +217,7 @@ RUN wget https://github.com/cran/yaml/archive/2.1.13.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/htmltools_0.3.5.tar.gz \
   && R CMD INSTALL htmltools_0.3.5.tar.gz \
   && rm htmltools_0.3.5.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/rmarkdown_0.9.6.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/rmarkdown/rmarkdown_0.9.6.tar.gz \
   && R CMD INSTALL rmarkdown_0.9.6.tar.gz \
   && rm rmarkdown_0.9.6.tar.gz
 
