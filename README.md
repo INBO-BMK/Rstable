@@ -1,4 +1,7 @@
 # R-stable
+
+[![](https://images.microbadger.com/badges/version/inbobmk/rstable.svg)](http://microbadger.com/images/inbobmk/rstable "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/inbobmk/rstable.svg)](http://microbadger.com/images/inbobmk/rstable "Get your own image badge on microbadger.com")
+
 A stable Docker image with R. The version of most software is hard-coded.
 
 | Available software | Version        |
