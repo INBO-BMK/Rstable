@@ -130,7 +130,7 @@ RUN wget https://cran.rstudio.com/src/contrib/Archive/crayon/crayon_1.3.1.tar.gz
 RUN wget https://github.com/cran/yaml/archive/2.1.13.tar.gz \
   && R CMD INSTALL 2.1.13.tar.gz \
   && rm 2.1.13.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/evaluate_0.9.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/evaluate/evaluate_0.9.tar.gz \
   && R CMD INSTALL evaluate_0.9.tar.gz \
   && rm evaluate_0.9.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/Archive/formatR/formatR_1.3.tar.gz \
