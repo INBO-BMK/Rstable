@@ -182,7 +182,7 @@ RUN wget https://github.com/cran/colorspace/archive/1.2-6.tar.gz \
   && wget https://github.com/cran/labeling/archive/0.3.tar.gz \
   && R CMD INSTALL 0.3.tar.gz \
   && rm 0.3.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/scales_0.4.0.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/scales/scales_0.4.0.tar.gz \
   && R CMD INSTALL scales_0.4.0.tar.gz \
   && rm scales_0.4.0.tar.gz \
   && wget https://github.com/cran/reshape2/archive/1.4.1.tar.gz \
