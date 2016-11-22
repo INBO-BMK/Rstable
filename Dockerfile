@@ -157,7 +157,7 @@ RUN wget https://cran.rstudio.com/src/contrib/yaml_2.1.14.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/base64enc_0.1-3.tar.gz \
   && R CMD INSTALL base64enc_0.1-3.tar.gz \
   && rm base64enc_0.1-3.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/rmarkdown_1.1.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/rmarkdown/rmarkdown_1.1.tar.gz \
   && R CMD INSTALL rmarkdown_1.1.tar.gz \
   && rm rmarkdown_1.1.tar.gz
 
