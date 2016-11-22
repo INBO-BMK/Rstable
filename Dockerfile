@@ -66,7 +66,7 @@ RUN wget https://cran.rstudio.com/src/contrib/assertthat_0.1.tar.gz \
   && rm assertthat_0.1.tar.gz
 
 ## Install dplyr and dependencies
-RUN wget https://cran.rstudio.com/src/contrib/Rcpp_0.12.7.tar.gz \
+RUN wget https://cran.rstudio.com/src/contrib/Archive/Rcpp/Rcpp_0.12.7.tar.gz \
   && R CMD INSTALL Rcpp_0.12.7.tar.gz \
   && rm Rcpp_0.12.7.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/lazyeval_0.2.0.tar.gz\
