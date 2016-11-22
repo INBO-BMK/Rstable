@@ -41,7 +41,7 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/httr_1.2.1.tar.gz \
   && R CMD INSTALL httr_1.2.1.tar.gz \
   && rm httr_1.2.1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/git2r_0.15.0.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/git2r/git2r_0.15.0.tar.gz \
   && R CMD INSTALL git2r_0.15.0.tar.gz  \
   && rm git2r_0.15.0.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/memoise_1.0.0.tar.gz \
