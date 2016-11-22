@@ -170,7 +170,7 @@ RUN wget https://cran.rstudio.com/src/contrib/rex_1.1.1.tar.gz \
   && rm covr_2.2.1.tar.gz
 
 ## Install ggplot2 and dependencies
-RUN wget https://cran.rstudio.com/src/contrib/colorspace_1.3-0.tar.gz \
+RUN wget https://cran.rstudio.com/src/contrib/Archive/colorspace/colorspace_1.3-0.tar.gz \
   && R CMD INSTALL colorspace_1.3-0.tar.gz \
   && rm colorspace_1.3-0.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/munsell_0.4.3.tar.gz \
