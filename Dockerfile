@@ -142,7 +142,7 @@ RUN wget https://cran.rstudio.com/src/contrib/yaml_2.1.14.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/markdown_0.7.7.tar.gz \
   && R CMD INSTALL markdown_0.7.7.tar.gz \
   && rm markdown_0.7.7.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/knitr_1.15.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/knitr/knitr_1.15.tar.gz \
   && R CMD INSTALL knitr_1.15.tar.gz \
   && rm knitr_1.15.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/bitops_1.0-6.tar.gz \
