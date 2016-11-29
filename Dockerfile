@@ -322,5 +322,10 @@ RUN wget https://cran.rstudio.com/src/contrib/mvtnorm_1.0-5.tar.gz \
   && R CMD INSTALL mvtnorm_1.0-5.tar.gz \
   && rm mvtnorm_1.0-5.tar.gz
 
+## install snowfall
+RUN wget https://cran.rstudio.com/src/contrib/snowfall_1.84-6.1.tar.gz \
+  && R CMD INSTALL snowfall_1.84-6.1.tar.gz \
+  && rm snowfall_1.84-6.1.tar.gz
+
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]

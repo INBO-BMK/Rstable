@@ -98,6 +98,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |         rstudioapi |            0.5 | 
 |             scales |          0.4.0 | 
 |             setRNG |       2013.9-1 | 
+|           snowfall |       1.84-6.1 |
 |                 sp |          1.2-3 | 
 |         stringdist |        0.9.4.1 | 
 |            stringi |          1.0-1 | 
