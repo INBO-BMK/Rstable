@@ -316,7 +316,7 @@ RUN wget https://cran.rstudio.com/src/contrib/brew_1.0-6.tar.gz \
   && rm roxygen2_5.0.1.tar.gz
 
 ## install RSQLite
-RUN wget https://cran.rstudio.com/src/contrib/RSQLite_1.0.0.tar.gz \
+RUN wget https://cran.rstudio.com/src/contrib/Archive/RSQLite/RSQLite_1.0.0.tar.gz \
   && R CMD INSTALL RSQLite_1.0.0.tar.gz \
   && rm RSQLite_1.0.0.tar.gz
 
