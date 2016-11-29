@@ -99,6 +99,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |         rstudioapi |            0.6 | 
 |             scales |          0.4.1 | 
 |             setRNG |       2013.9-1 | 
+|               snow |          0.4-2 | 
 |           snowfall |       1.84-6.1 | 
 |                 sp |          1.2-3 | 
 |         stringdist |        0.9.4.2 | 
