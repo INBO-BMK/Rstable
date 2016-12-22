@@ -233,7 +233,7 @@ RUN wget https://github.com/cran/stringdist/archive/0.9.4.1.tar.gz \
   && rm lintr_1.0.0.tar.gz
 
 ## install sp
-RUN wget https://cran.rstudio.com/src/contrib/sp_1.2-3.tar.gz \
+RUN wget https://cran.rstudio.com/src/contrib/Archive/sp/sp_1.2-3.tar.gz \
   && R CMD INSTALL sp_1.2-3.tar.gz \
   && rm sp_1.2-3.tar.gz
 
