@@ -236,7 +236,7 @@ RUN wget https://cran.rstudio.com/src/contrib/registry_0.3.tar.gz \
   && rm igraph_1.0.1.tar.gz
 
 ## install lintr and dependencies
-RUN wget https://cran.rstudio.com/src/contrib/stringdist_0.9.4.2.tar.gz \
+RUN wget https://cran.rstudio.com/src/contrib/Archive/stringdist/stringdist_0.9.4.2.tar.gz \
   && R CMD INSTALL stringdist_0.9.4.2.tar.gz \
   && rm stringdist_0.9.4.2.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/lintr_1.0.0.tar.gz \
