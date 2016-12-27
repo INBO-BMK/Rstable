@@ -93,6 +93,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |           registry |            0.3 | 
 |           reshape2 |          1.4.2 | 
 |                rex |          1.1.1 | 
+|              rgeos |         0.3-21 | 
 |          rmarkdown |            1.1 | 
 |           rngtools |          1.2.4 | 
 |           roxygen2 |          5.0.1 | 

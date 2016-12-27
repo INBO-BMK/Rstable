@@ -333,5 +333,10 @@ RUN wget https://cran.rstudio.com/src/contrib/snow_0.4-2.tar.gz \
   && R CMD INSTALL snowfall_1.84-6.1.tar.gz \
   && rm snowfall_1.84-6.1.tar.gz
 
+## install rgeos
+RUN wget https://cran.rstudio.com/src/contrib/rgeos_0.3-21.tar.gz \
+  && R CMD INSTALL rgeos_0.3-21.tar.gz \
+  && rm rgeos_0.3-21.tar.gz
+
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]
