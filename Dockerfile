@@ -341,7 +341,7 @@ RUN wget https://cran.rstudio.com/src/contrib/snow_0.4-2.tar.gz \
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
      libgeos++-dev \
-  && wget https://cran.rstudio.com/src/contrib/rgeos_0.3-21.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/rgeos/rgeos_0.3-21.tar.gz \
   && R CMD INSTALL rgeos_0.3-21.tar.gz \
   && rm rgeos_0.3-21.tar.gz
 
