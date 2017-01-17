@@ -20,8 +20,9 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/Archive/curl/curl_2.2.tar.gz \
   && R CMD INSTALL curl_2.2.tar.gz \
   && rm curl_2.2.tar.gz \
-  && Rscript -e "devtools::install_github('eddelbuettel/digest', ref = 'e3ced3e2b9e16735b2e90a6d4d6ff39998687726', dependencies = FALSE, upgrade_dependencies = FALSE)"
-  && wget https://cran.rstudio.com/src/contrib/R6_2.2.0.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/digest/digest_0.6.10.tar.gz \
+  && R CMD INSTALL digest_0.6.10.tar.gz \
+  && rm digest_0.6.10.tar.gz \  && wget https://cran.rstudio.com/src/contrib/R6_2.2.0.tar.gz \
   && R CMD INSTALL R6_2.2.0.tar.gz \
   && rm R6_2.2.0.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/magrittr_1.5.tar.gz \
@@ -57,6 +58,10 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/devtools_1.12.0.tar.gz \
   && R CMD INSTALL devtools_1.12.0.tar.gz \
   && rm devtools_1.12.0.tar.gz
+
+## Upgrade devtools
+RUN Rscript -e "devtools::install_github('eddelbuettel/digest', ref = 'e3ced3e2b9e16735b2e90a6d4d6ff39998687726', dependencies = FALSE, upgrade_dependencies = FALSE)"
+
 
 ## Install assertthat
 RUN wget https://cran.rstudio.com/src/contrib/assertthat_0.1.tar.gz \
