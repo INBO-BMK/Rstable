@@ -60,8 +60,8 @@ RUN apt-get update \
   && R CMD INSTALL devtools_1.11.1.tar.gz \
   && rm devtools_1.11.1.tar.gz
 
-## Install digest 0.6.9.3 from Github
-RUN Rscript -e 'devtools::install_github("eddelbuettel/digest", ref = "fcbb3315450b9c1bf7121efd69bec605ce57fb51", upgrade_dependencies = FALSE)'
+## Install digest 0.6.11 from Github
+RUN Rscript -e "devtools::install_github('eddelbuettel/digest', ref = 'e3ced3e2b9e16735b2e90a6d4d6ff39998687726', dependencies = FALSE, upgrade_dependencies = FALSE)"
 
 ## Install assertthat
 RUN wget https://cran.rstudio.com/src/contrib/assertthat_0.1.tar.gz \
@@ -329,6 +329,45 @@ RUN wget https://cran.rstudio.com/src/contrib/snow_0.4-2.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/snowfall_1.84-6.1.tar.gz \
   && R CMD INSTALL snowfall_1.84-6.1.tar.gz \
   && rm snowfall_1.84-6.1.tar.gz
+
+## install rgeos
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+     libgeos++-dev \
+  && wget https://cran.rstudio.com/src/contrib/Archive/rgeos/rgeos_0.3-21.tar.gz \
+  && R CMD INSTALL rgeos_0.3-21.tar.gz \
+  && rm rgeos_0.3-21.tar.gz
+
+## install multimput
+RUN wget https://cran.rstudio.com/src/contrib/tibble_1.2.tar.gz \
+  && R CMD INSTALL tibble_1.2.tar.gz \
+  && rm tibble_1.2.tar.gz \
+  && wget https://github.com/inbo/multimput/archive/v0.2.5.tar.gz \
+  && R CMD INSTALL v0.2.5.tar.gz \
+  && rm v0.2.5.tar.gz
+
+## install aws.s3
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    libxml2-dev \
+  && wget https://cran.rstudio.com/src/contrib/xml2_1.1.0.tar.gz \
+  && R CMD INSTALL xml2_1.1.0.tar.gz \
+  && rm xml2_1.1.0.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/base64enc_0.1-3.tar.gz \
+  && R CMD INSTALL base64enc_0.1-3.tar.gz \
+  && rm base64enc_0.1-3.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/aws.signature_0.2.6.tar.gz \
+  && R CMD INSTALL aws.signature_0.2.6.tar.gz \
+  && rm aws.signature_0.2.6.tar.gz \
+  && Rscript -e "devtools::install_github('cloudyr/aws.s3', ref = 'a223d2728f8f01e4176495038c3d582bd400a9d2', dependencies = FALSE, upgrade_dependencies = FALSE)"
+
+## install RPostgreSQL
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    libpq-dev \
+  && wget https://cran.rstudio.com/src/contrib/RPostgreSQL_0.4-1.tar.gz \
+  && R CMD INSTALL RPostgreSQL_0.4-1.tar.gz \
+  && rm RPostgreSQL_0.4-1.tar.gz
 
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]
