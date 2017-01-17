@@ -194,7 +194,7 @@ RUN wget https://cran.rstudio.com/src/contrib/Archive/colorspace/colorspace_1.3-
   && wget https://cran.rstudio.com/src/contrib/gtable_0.2.0.tar.gz \
   && R CMD INSTALL gtable_0.2.0.tar.gz \
   && rm gtable_0.2.0.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/ggplot2_2.2.0.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/ggplot2/ggplot2_2.2.0.tar.gz \
   && R CMD INSTALL ggplot2_2.2.0.tar.gz \
   && rm ggplot2_2.2.0.tar.gz
 
