@@ -366,7 +366,7 @@ RUN apt-get update \
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     libpq-dev \
-  wget https://cran.rstudio.com/src/contrib/RPostgreSQL_0.4-1.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/RPostgreSQL_0.4-1.tar.gz \
   && R CMD INSTALL RPostgreSQL_0.4-1.tar.gz \
   && rm RPostgreSQL_0.4-1.tar.gz
 
