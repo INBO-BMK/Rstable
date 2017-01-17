@@ -34,6 +34,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |                 R6 |          2.2.0 | 
 |       RColorBrewer |          1.1-2 | 
 |              RODBC |         1.3-14 | 
+|        RPostgreSQL |          0.4-1 | 
 |            RSQLite |          1.0.0 | 
 |             Rcgmin |      2013-2.21 | 
 |               Rcpp |         0.12.7 | 
