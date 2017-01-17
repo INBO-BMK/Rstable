@@ -253,7 +253,7 @@ RUN wget https://cran.rstudio.com/src/contrib/Archive/sp/sp_1.2-3.tar.gz \
   && rm sp_1.2-3.tar.gz
 
 ## install tidyr
-RUN wget https://cran.rstudio.com/src/contrib/tidyr_0.6.0.tar.gz \
+RUN wget https://cran.rstudio.com/src/contrib/Archive/tidyr/tidyr_0.6.0.tar.gz \
   && R CMD INSTALL tidyr_0.6.0.tar.gz \
   && rm tidyr_0.6.0.tar.gz
 
