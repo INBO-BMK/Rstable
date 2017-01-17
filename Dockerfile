@@ -20,7 +20,7 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/Archive/curl/curl_2.2.tar.gz \
   && R CMD INSTALL curl_2.2.tar.gz \
   && rm curl_2.2.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/digest_0.6.10.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/digest/digest_0.6.10.tar.gz \
   && R CMD INSTALL digest_0.6.10.tar.gz \
   && rm digest_0.6.10.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/R6_2.2.0.tar.gz \
