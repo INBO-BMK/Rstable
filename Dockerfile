@@ -22,7 +22,8 @@ RUN apt-get update \
   && rm curl_2.2.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/Archive/digest/digest_0.6.10.tar.gz \
   && R CMD INSTALL digest_0.6.10.tar.gz \
-  && rm digest_0.6.10.tar.gz \  && wget https://cran.rstudio.com/src/contrib/R6_2.2.0.tar.gz \
+  && rm digest_0.6.10.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/R6_2.2.0.tar.gz \
   && R CMD INSTALL R6_2.2.0.tar.gz \
   && rm R6_2.2.0.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/magrittr_1.5.tar.gz \
