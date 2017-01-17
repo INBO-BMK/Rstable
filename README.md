@@ -51,7 +51,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |           devtools |         1.12.0 | 
 |            dfoptim |       2016.7-1 | 
 |          dichromat |          2.0-0 | 
-|             digest |         0.6.10 | 
+|             digest |         0.6.11 | 
 |         doParallel |         1.0.10 | 
 |              dplyr |          0.5.0 | 
 |           evaluate |           0.10 | 
@@ -79,6 +79,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |            memoise |          1.0.0 | 
 |               mime |            0.5 | 
 |              minqa |          1.2.4 | 
+|          multimput |          0.2.5 | 
 |            munsell |          0.4.3 | 
 |            mvtnorm |          1.0-5 | 
 |             nloptr |          1.0.4 | 

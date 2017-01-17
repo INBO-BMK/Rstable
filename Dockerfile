@@ -20,9 +20,7 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/Archive/curl/curl_2.2.tar.gz \
   && R CMD INSTALL curl_2.2.tar.gz \
   && rm curl_2.2.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/digest/digest_0.6.10.tar.gz \
-  && R CMD INSTALL digest_0.6.10.tar.gz \
-  && rm digest_0.6.10.tar.gz \
+  && Rscript -e "devtools::install_github('eddelbuettel/digest', ref = 'e3ced3e2b9e16735b2e90a6d4d6ff39998687726', dependencies = FALSE, upgrade_dependencies = FALSE)"
   && wget https://cran.rstudio.com/src/contrib/R6_2.2.0.tar.gz \
   && R CMD INSTALL R6_2.2.0.tar.gz \
   && rm R6_2.2.0.tar.gz \
@@ -340,6 +338,11 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/rgeos_0.3-21.tar.gz \
   && R CMD INSTALL rgeos_0.3-21.tar.gz \
   && rm rgeos_0.3-21.tar.gz
+
+## install multimput
+RUN wget https://github.com/inbo/multimput/archive/v0.2.5.tar.gz \
+  && R CMD INSTALL v0.2.5.tar.gz \
+  && rm v0.2.5.tar.gz
 
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]
