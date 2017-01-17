@@ -363,7 +363,10 @@ RUN apt-get update \
   && Rscript -e "devtools::install_github('cloudyr/aws.s3', ref = 'a223d2728f8f01e4176495038c3d582bd400a9d2', dependencies = FALSE, upgrade_dependencies = FALSE)"
 
 ## install RPostgreSQL
-RUN wget https://cran.rstudio.com/src/contrib/RPostgreSQL_0.4-1.tar.gz \
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    libpq-dev \
+  wget https://cran.rstudio.com/src/contrib/RPostgreSQL_0.4-1.tar.gz \
   && R CMD INSTALL RPostgreSQL_0.4-1.tar.gz \
   && rm RPostgreSQL_0.4-1.tar.gz
 
