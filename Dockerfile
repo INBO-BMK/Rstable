@@ -350,5 +350,14 @@ RUN wget https://github.com/inbo/multimput/archive/v0.2.5.tar.gz \
   && R CMD INSTALL v0.2.5.tar.gz \
   && rm v0.2.5.tar.gz
 
+## install aws.s3
+RUN wget https://cran.rstudio.com/src/contrib/xml2_1.1.0.tar.gz \
+  && R CMD INSTALL xml2_1.1.0.tar.gz \
+  && rm xml2_1.1.0.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/aws.signature_0.2.6.tar.gz \
+  && R CMD INSTALL aws.signature_0.2.6.tar.gz \
+  && rm aws.signature_0.2.6.tar.gz \
+  && Rscript -e "devtools::install_github('cloudyr/aws.s3', ref = 'a223d2728f8f01e4176495038c3d582bd400a9d2', dependencies = FALSE, upgrade_dependencies = FALSE)"
+
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]
