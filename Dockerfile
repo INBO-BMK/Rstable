@@ -61,7 +61,7 @@ RUN apt-get update \
   && rm devtools_1.11.1.tar.gz
 
 ## Install digest 0.6.11 from Github
-RUN Rscript -e "devtools::install_github('eddelbuettel/digest', ref = 'e3ced3e2b9e16735b2e90a6d4d6ff39998687726', dependencies = FALSE, upgrade_dependencies = FALSE)"
+RUN Rscript -e "devtools::install_github('ThierryO/digest', ref = 'f30edad036452d1530da9c5d357daba90af1417e', dependencies = FALSE, upgrade_dependencies = FALSE)"
 
 ## Install assertthat
 RUN wget https://cran.rstudio.com/src/contrib/assertthat_0.1.tar.gz \
