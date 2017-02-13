@@ -311,7 +311,7 @@ RUN wget https://github.com/inbo/INLA/archive/v0.0-1468872408.tar.gz \
 RUN wget https://cran.rstudio.com/src/contrib/Archive/brew/brew_1.0-6.tar.gz \
   && R CMD INSTALL brew_1.0-6.tar.gz \
   && rm brew_1.0-6.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/roxygen2_5.0.1.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/roxygen2/roxygen2_5.0.1.tar.gz \
   && R CMD INSTALL roxygen2_5.0.1.tar.gz \
   && rm roxygen2_5.0.1.tar.gz
 
