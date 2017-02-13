@@ -356,7 +356,7 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/aws.signature_0.2.6.tar.gz \
   && R CMD INSTALL aws.signature_0.2.6.tar.gz \
   && rm aws.signature_0.2.6.tar.gz \
-  && Rscript -e "devtools::install_github('cloudyr/aws.s3', ref = 'a223d2728f8f01e4176495038c3d582bd400a9d2', dependencies = FALSE, upgrade_dependencies = FALSE)"
+  && Rscript -e "devtools::install_github('cloudyr/aws.s3', ref = '72edc122c763bf9e8db546a8c8c22794659b110d', dependencies = FALSE, upgrade_dependencies = FALSE)"
 
 ## install RPostgreSQL
 RUN apt-get update \

@@ -41,7 +41,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |          RcppEigen |      0.3.2.9.0 | 
 |             Rvmmin |     2013-11.12 | 
 |         assertthat |            0.1 | 
-|             aws.s3 |         0.1.36 | 
+|             aws.s3 |         0.1.38 | 
 |      aws.signature |          0.2.6 | 
 |          base64enc |          0.1-3 | 
 |             bitops |          1.0-6 | 
