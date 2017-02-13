@@ -54,7 +54,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |           devtools |         1.12.0 | 
 |            dfoptim |       2016.7-1 | 
 |          dichromat |          2.0-0 | 
-|             digest |         0.6.11 | 
+|             digest |         0.6.12 | 
 |         doParallel |         1.0.10 | 
 |              dplyr |          0.5.0 | 
 |           evaluate |           0.10 | 
