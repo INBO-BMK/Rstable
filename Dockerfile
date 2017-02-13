@@ -350,7 +350,7 @@ RUN wget https://github.com/inbo/multimput/archive/v0.2.5.tar.gz \
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     libxml2-dev \
-  && wget https://cran.rstudio.com/src/contrib/xml2_1.1.0.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/xml2/xml2_1.1.0.tar.gz \
   && R CMD INSTALL xml2_1.1.0.tar.gz \
   && rm xml2_1.1.0.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/aws.signature_0.2.6.tar.gz \
