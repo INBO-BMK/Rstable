@@ -305,7 +305,7 @@ RUN wget https://github.com/inbo/INLA/archive/v0.0-1455098891.tar.gz \
 RUN wget https://github.com/cran/brew/archive/1.0-6.tar.gz \
   && R CMD INSTALL 1.0-6.tar.gz \
   && rm 1.0-6.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/roxygen2_5.0.1.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/roxygen/roxygen2_5.0.1.tar.gz \
   && R CMD INSTALL roxygen2_5.0.1.tar.gz \
   && rm roxygen2_5.0.1.tar.gz
 
