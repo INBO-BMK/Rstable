@@ -20,9 +20,9 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/Archive/curl/curl_0.9.7.tar.gz \
   && R CMD INSTALL curl_0.9.7.tar.gz \
   && rm curl_0.9.7.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/digest/digest_0.6.9.tar.gz \
-  && R CMD INSTALL digest_0.6.9.tar.gz \
-  && rm digest_0.6.9.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/digest/digest_0.6.12.tar.gz \
+  && R CMD INSTALL digest_0.6.12.tar.gz \
+  && rm digest_0.6.12.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/Archive/R6/R6_2.1.2.tar.gz \
   && R CMD INSTALL R6_2.1.2.tar.gz \
   && rm R6_2.1.2.tar.gz \
@@ -59,9 +59,6 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/Archive/devtools/devtools_1.11.1.tar.gz \
   && R CMD INSTALL devtools_1.11.1.tar.gz \
   && rm devtools_1.11.1.tar.gz
-
-## Install digest 0.6.11 from Github
-RUN Rscript -e "devtools::install_github('ThierryO/digest', ref = 'f30edad036452d1530da9c5d357daba90af1417e', dependencies = FALSE, upgrade_dependencies = FALSE)"
 
 ## Install assertthat
 RUN wget https://cran.rstudio.com/src/contrib/assertthat_0.1.tar.gz \
