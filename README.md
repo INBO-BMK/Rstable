@@ -30,6 +30,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |                 BH |        1.62.0-1 | 
 |                DBI |           0.5-1 | 
 |               INLA |  0.0-1468872408 | 
+|       MatrixModels |           0.4-1 | 
 |                NMF |          0.20.6 | 
 |                 R6 |           2.2.0 | 
 |       RColorBrewer |           1.1-2 | 

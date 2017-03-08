@@ -146,7 +146,8 @@ RUN  ./cran_install.sh numDeriv 2016.8-1 \
   && ./cran_install.sh optimx 2013.8.7
 
 ## install INLA
-RUN wget https://github.com/inbo/INLA/archive/v0.0-1485844051.tar.gz \
+RUN  ./cran_install.sh MatrixModels 0.4-1 \
+  && wget https://github.com/inbo/INLA/archive/v0.0-1485844051.tar.gz \
   && R CMD INSTALL v0.0-1485844051.tar.gz \
   && rm v0.0-1485844051.tar.gz
 
