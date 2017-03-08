@@ -28,23 +28,23 @@ RUN apt-get update \
   && ./cran-install.sh whisker 0.3-2 \
   && ./cran-install.sh rstudioapi 0.5 \
   && ./cran-install.sh withr 1.0.1 \
-  && ./cran-install.sh devtools 1.11.1 \
+  && ./cran-install.sh devtools 1.11.1
 
 ## Install assertthat
-RUN  ./cran-install.sh assertthat 0.1 \
+RUN  ./cran-install.sh assertthat 0.1
 
 ## Install dplyr and dependencies
 RUN  ./cran-install.sh Rcpp 0.12.4 \
   && ./cran-install.sh lazyeval 0.1.10 \
   && ./cran-install.sh DBI 0.4-1 \
   && ./cran-install.sh BH 1.60.0-2 \
-  && ./cran-install.sh dplyr 0.4.3 \
+  && ./cran-install.sh dplyr 0.4.3
 
 ## Install plyr
-RUN  ./cran-install.sh plyr 1.8.3 \
+RUN  ./cran-install.sh plyr 1.8.3
 
 ## Install lubridate
-RUN  ./cran-install.sh lubridate 1.5.6 \
+RUN  ./cran-install.sh lubridate 1.5.6
 
 ## Install freetds
 RUN apt-get update \
@@ -62,7 +62,7 @@ RUN apt-get update \
     libodbc1 \
     unixodbc-dev \
   && apt-get clean \
-  && ./cran-install.sh RODBC 1.3-13 \
+  && ./cran-install.sh RODBC 1.3-13
 
 ## Install testthat and dependencies
 RUN  ./cran-install.sh crayon 1.3.1 \
@@ -79,11 +79,11 @@ RUN  ./cran-install.sh yaml 2.1.13 \
   && ./cran-install.sh bitops 1.0-6 \
   && ./cran-install.sh caTools 1.17.1 \
   && ./cran-install.sh htmltools 0.3.5 \
-  && ./cran-install.sh rmarkdown 0.9.6 \
+  && ./cran-install.sh rmarkdown 0.9.6
 
 ## Install covr and dependencies
 RUN  ./cran-install.sh rex 1.1.1 \
-  && ./cran-install.sh covr 2.0.1 \
+  && ./cran-install.sh covr 2.0.1
 
 ## Install ggplot2 and dependencies
 RUN  ./cran-install.sh colorspace 1.2-6 \
@@ -97,7 +97,7 @@ RUN  ./cran-install.sh colorspace 1.2-6 \
   && ./cran-install.sh ggplot2 2.1.0 \
 
 ## Install xtable
-RUN  ./cran-install.sh xtable 1.8-2 \
+RUN  ./cran-install.sh xtable 1.8-2
 
 ## Install igraph and its dependencies
 RUN  ./cran-install.sh registry 0.3 \
@@ -109,23 +109,23 @@ RUN  ./cran-install.sh registry 0.3 \
   && ./cran-install.sh doParallel 1.0.10 \
   && ./cran-install.sh NMF 0.20.6 \
   && ./cran-install.sh irlba 2.0.0 \
-  && ./cran-install.sh igraph 1.0.1 \
+  && ./cran-install.sh igraph 1.0.1
 
 ## install lintr and dependencies
 RUN  ./cran-install.sh stringdist 0.9.4.1 \
-  && ./cran-install.sh lintr 1.0.0 \
+  && ./cran-install.sh lintr 1.0.0
 
 ## install sp
-RUN  ./cran-install.sh sp 1.2-3 \
+RUN  ./cran-install.sh sp 1.2-3
 
 ## install tidyr
-RUN  ./cran-install.sh tidyr 0.4.1 \
+RUN  ./cran-install.sh tidyr 0.4.1
 
 ## install lme4
 RUN  ./cran-install.sh minga 1.2.4 \
   && ./cran-install.sh nloptr 1.0.4 \
   && ./cran-install.sh RcppEigen 0.3.2.8.1 \
-  && ./cran-install.sh lme4 1.1-12 \
+  && ./cran-install.sh lme4 1.1-12
 
 ## install optimx and dependencies
 RUN  ./cran-install.sh numDeriv 2014.2-1 \
@@ -138,7 +138,7 @@ RUN  ./cran-install.sh numDeriv 2014.2-1 \
   && ./cran-install.sh setRNG 2013.9-1 \
   && ./cran-install.sh dfoptim 2011.8-1 \
   && ./cran-install.sh svUnit 0.7-12 \
-  && ./cran-install.sh optimx 2013.8.7 \
+  && ./cran-install.sh optimx 2013.8.7
 
 ## install INLA
 RUN wget https://github.com/inbo/INLA/archive/v0.0-1455098891.tar.gz \
@@ -147,23 +147,23 @@ RUN wget https://github.com/inbo/INLA/archive/v0.0-1455098891.tar.gz \
 
 ## install roxygen2 and dependencies
 RUN  ./cran-install.sh brew 1.0-6 \
-  && ./cran-install.sh roxygen2 5.0.1 \
+  && ./cran-install.sh roxygen2 5.0.1
 
 ## install RSQLite
-RUN  ./cran-install.sh RSQLite 1.0.0 \
+RUN  ./cran-install.sh RSQLite 1.0.0
 
 ## install rmvtnorm
-RUN  ./cran-install.sh mvtnorm 1.0-5 \
+RUN  ./cran-install.sh mvtnorm 1.0-5
 
 ## install snowfall
 RUN  ./cran-install.sh snow 0.4-2 \
-  && ./cran-install.sh snowfall 1.84-6.1 \
+  && ./cran-install.sh snowfall 1.84-6.1
 
 ## install rgeos
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
      libgeos++-dev \
-  && ./cran-install.sh rgeos 0.3-21 \
+  && ./cran-install.sh rgeos 0.3-21
 
 ## install multimput
 RUN  ./cran-install.sh tibble 1.2 \
@@ -184,7 +184,7 @@ RUN apt-get update \
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     libpq-dev \
-  && ./cran-install.sh RPostgreSQL 0.4-1 \
+  && ./cran-install.sh RPostgreSQL 0.4-1
 
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]
