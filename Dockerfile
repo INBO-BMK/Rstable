@@ -3,6 +3,8 @@ FROM inbobmk/rlatex:3.3.0
 ## This handle reaches Thierry
 MAINTAINER "Thierry Onkelinx" thierry.onkelinx@inbo.be
 
+COPY cran-install.sh cran-install.sh
+
 ## Install devtools and dependencies
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
