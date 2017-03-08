@@ -1,4 +1,4 @@
-FROM inbobmk/rlatex:3.3.2
+FROM inbobmk/rlatex:3.3.3
 
 ## This handle reaches Thierry
 MAINTAINER "Thierry Onkelinx" thierry.onkelinx@inbo.be
@@ -15,17 +15,17 @@ RUN apt-get update \
     libssh2-1-dev \
   && apt-get clean
 
-RUN  ./cran_install.sh jsonlite 1.1 \
+RUN  ./cran_install.sh jsonlite 1.3 \
   && ./cran_install.sh mime 0.5 \
-  && ./cran_install.sh curl 2.2 \
+  && ./cran_install.sh curl 2.3 \
   && ./cran_install.sh digest 0.6.12 \
   && ./cran_install.sh R6 2.2.0 \
   && ./cran_install.sh magrittr 1.5 \
   && ./cran_install.sh stringi 1.1.2 \
-  && ./cran_install.sh stringr 1.1.0 \
-  && ./cran_install.sh openssl 0.9.5 \
+  && ./cran_install.sh stringr 1.2.0 \
+  && ./cran_install.sh openssl 0.9.6 \
   && ./cran_install.sh httr 1.2.1 \
-  && ./cran_install.sh git2r 0.15.0  \
+  && ./cran_install.sh git2r 0.18.0  \
   && ./cran_install.sh memoise 1.0.0 \
   && ./cran_install.sh whisker 0.3-2 \
   && ./cran_install.sh rstudioapi 0.6 \
@@ -36,10 +36,10 @@ RUN  ./cran_install.sh jsonlite 1.1 \
 RUN  ./cran_install.sh assertthat 0.1
 
 ## Install dplyr and dependencies
-RUN  ./cran_install.sh Rcpp 0.12.7 \
+RUN  ./cran_install.sh Rcpp 0.12.9 \
   && ./cran_install.sh lazyeval 0.2.0 \
   && ./cran_install.sh DBI 0.5-1 \
-  && ./cran_install.sh BH 1.60.0-2 \
+  && ./cran_install.sh BH 1.62.0-1 \
   && ./cran_install.sh tibble 1.2 \
   && ./cran_install.sh dplyr 0.5.0
 
@@ -78,16 +78,17 @@ RUN  ./cran_install.sh yaml 2.1.14 \
   && ./cran_install.sh formatR 1.4 \
   && ./cran_install.sh highr 0.6 \
   && ./cran_install.sh markdown 0.7.7 \
-  && ./cran_install.sh knitr 1.15 \
+  && ./cran_install.sh knitr 1.15.1 \
   && ./cran_install.sh bitops 1.0-6 \
   && ./cran_install.sh caTools 1.17.1 \
   && ./cran_install.sh htmltools 0.3.5 \
   && ./cran_install.sh base64enc 0.1-3 \
-  && ./cran_install.sh rmarkdown 1.1
+  && ./cran_install.sh rprojroot 1.2 \
+  && ./cran_install.sh rmarkdown 1.3
 
 ## Install covr and dependencies
 RUN  ./cran_install.sh rex 1.1.1 \
-  && ./cran_install.sh covr 2.2.1
+  && ./cran_install.sh covr 2.2.2
 
 ## Install ggplot2 and dependencies
 RUN  ./cran_install.sh colorspace 1.3-0 \
@@ -98,7 +99,7 @@ RUN  ./cran_install.sh colorspace 1.3-0 \
   && ./cran_install.sh scales 0.4.1 \
   && ./cran_install.sh reshape2 1.4.2 \
   && ./cran_install.sh gtable 0.2.0 \
-  && ./cran_install.sh ggplot2 2.2.0
+  && ./cran_install.sh ggplot2 2.2.1
 
 ## Install xtable
 RUN  ./cran_install.sh xtable 1.8-2
@@ -116,14 +117,14 @@ RUN  ./cran_install.sh registry 0.3 \
   && ./cran_install.sh igraph 1.0.1
 
 ## install lintr and dependencies
-RUN  ./cran_install.sh stringdist 0.9.4.2 \
+RUN  ./cran_install.sh stringdist 0.9.4.4 \
   && ./cran_install.sh lintr 1.0.0
 
 ## install sp
-RUN  ./cran_install.sh sp 1.2-3
+RUN  ./cran_install.sh sp 1.2-4
 
 ## install tidyr
-RUN  ./cran_install.sh tidyr 0.6.0
+RUN  ./cran_install.sh tidyr 0.6.1
 
 ## install lme4
 RUN  ./cran_install.sh minqa 1.2.4 \
@@ -145,19 +146,19 @@ RUN  ./cran_install.sh numDeriv 2016.8-1 \
   && ./cran_install.sh optimx 2013.8.7
 
 ## install INLA
-RUN wget https://github.com/inbo/INLA/archive/v0.0-1468872408.tar.gz \
-  && R CMD INSTALL v0.0-1468872408.tar.gz \
-  && rm v0.0-1468872408.tar.gz
+RUN wget https://github.com/inbo/INLA/archive/v0.0-1485844051.tar.gz \
+  && R CMD INSTALL v0.0-1485844051.tar.gz \
+  && rm v0.0-1485844051.tar.gz
 
 ## install roxygen2 and dependencies
 RUN  ./cran_install.sh brew 1.0-6 \
-  && ./cran_install.sh roxygen2 5.0.1
+  && ./cran_install.sh roxygen2 6.0.1
 
 ## install RSQLite
-RUN  ./cran_install.sh RSQLite 1.0.0
+RUN  ./cran_install.sh RSQLite 1.1-2
 
 ## install rmvtnorm
-RUN  ./cran_install.sh mvtnorm 1.0-5
+RUN  ./cran_install.sh mvtnorm 1.0-6
 
 ## install snowfall
 RUN  ./cran_install.sh snow 0.4-2 \
@@ -167,20 +168,20 @@ RUN  ./cran_install.sh snow 0.4-2 \
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
      libgeos++-dev \
-  && ./cran_install.sh rgeos 0.3-21
+  && ./cran_install.sh rgeos 0.3-22
 
 ## install multimput
-RUN wget https://github.com/inbo/multimput/archive/v0.2.5.tar.gz \
-  && R CMD INSTALL v0.2.5.tar.gz \
-  && rm v0.2.5.tar.gz
+RUN wget https://github.com/inbo/multimput/archive/v0.2.6.tar.gz \
+  && R CMD INSTALL v0.2.6.tar.gz \
+  && rm v0.2.6.tar.gz
 
 ## install aws.s3
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     libxml2-dev \
-  && ./cran_install.sh xml2 1.1.0 \
+  && ./cran_install.sh xml2 1.1.1 \
   && ./cran_install.sh aws.signature 0.2.6 \
-  && Rscript -e "devtools::install_github('cloudyr/aws.s3', ref = '72edc122c763bf9e8db546a8c8c22794659b110d', dependencies = FALSE, upgrade_dependencies = FALSE)"
+  && Rscript -e "devtools::install_github('cloudyr/aws.s3', ref = '7cbfa344b00032e27514f6c7c9314fde775048f4', dependencies = FALSE, upgrade_dependencies = FALSE)"
 
 ## install RPostgreSQL
 RUN apt-get update \
