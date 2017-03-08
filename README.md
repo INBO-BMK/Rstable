@@ -44,6 +44,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |         assertthat |             0.1 | 
 |             aws.s3 |           0.2.0 | 
 |      aws.signature |           0.2.6 | 
+|          backports |           1.0.5 | 
 |          base64enc |           0.1-3 | 
 |             bitops |           1.0-6 | 
 |               brew |           1.0-6 | 

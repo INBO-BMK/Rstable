@@ -13,9 +13,8 @@ RUN apt-get update \
     git \
     libssl-dev \
     libssh2-1-dev \
-  && apt-get clean
-
-RUN  ./cran_install.sh jsonlite 1.3 \
+  && apt-get clean \
+  && ./cran_install.sh jsonlite 1.3 \
   && ./cran_install.sh mime 0.5 \
   && ./cran_install.sh curl 2.3 \
   && ./cran_install.sh digest 0.6.12 \
@@ -64,8 +63,8 @@ RUN apt-get update \
     libltdl7 \
     libodbc1 \
     unixodbc-dev \
-  && apt-get clean
-RUN  ./cran_install.sh RODBC 1.3-14
+  && apt-get clean \
+  && ./cran_install.sh RODBC 1.3-14
 
 ## Install testthat and dependencies
 RUN  ./cran_install.sh crayon 1.3.2 \
@@ -83,6 +82,7 @@ RUN  ./cran_install.sh yaml 2.1.14 \
   && ./cran_install.sh caTools 1.17.1 \
   && ./cran_install.sh htmltools 0.3.5 \
   && ./cran_install.sh base64enc 0.1-3 \
+  && ./cran_install.sh backports 1.0.5 \
   && ./cran_install.sh rprojroot 1.2 \
   && ./cran_install.sh rmarkdown 1.3
 
