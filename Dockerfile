@@ -11,86 +11,38 @@ RUN apt-get update \
     libssl-dev \
     libssh2-1-dev \
   && apt-get clean \
-  && wget https://cran.rstudio.com/src/contrib/Archive/jsonlite/jsonlite_0.9.19.tar.gz \
-  && R CMD INSTALL jsonlite_0.9.19.tar.gz \
-  && rm jsonlite_0.9.19.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/mime/mime_0.4.tar.gz \
-  && R CMD INSTALL mime_0.4.tar.gz \
-  && rm mime_0.4.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/curl/curl_0.9.7.tar.gz \
-  && R CMD INSTALL curl_0.9.7.tar.gz \
-  && rm curl_0.9.7.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/digest_0.6.12.tar.gz \
-  && R CMD INSTALL digest_0.6.12.tar.gz \
-  && rm digest_0.6.12.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/R6/R6_2.1.2.tar.gz \
-  && R CMD INSTALL R6_2.1.2.tar.gz \
-  && rm R6_2.1.2.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/magrittr_1.5.tar.gz \
-  && R CMD INSTALL magrittr_1.5.tar.gz \
-  && rm magrittr_1.5.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/stringi/stringi_1.0-1.tar.gz \
-  && R CMD INSTALL stringi_1.0-1.tar.gz \
-  && rm stringi_1.0-1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/stringr/stringr_1.0.0.tar.gz \
-  && R CMD INSTALL stringr_1.0.0.tar.gz \
-  && rm stringr_1.0.0.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/openssl/openssl_0.9.3.tar.gz \
-  && R CMD INSTALL openssl_0.9.3.tar.gz \
-  && rm openssl_0.9.3.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/httr/httr_1.1.0.tar.gz \
-  && R CMD INSTALL httr_1.1.0.tar.gz \
-  && rm httr_1.1.0.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/git2r/git2r_0.14.0.tar.gz \
-  && R CMD INSTALL git2r_0.14.0.tar.gz  \
-  && rm git2r_0.14.0.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/memoise_1.0.0.tar.gz \
-  && R CMD INSTALL memoise_1.0.0.tar.gz \
-  && rm memoise_1.0.0.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/whisker_0.3-2.tar.gz \
-  && R CMD INSTALL whisker_0.3-2.tar.gz \
-  && rm whisker_0.3-2.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/rstudioapi/rstudioapi_0.5.tar.gz \
-  && R CMD INSTALL rstudioapi_0.5.tar.gz \
-  && rm rstudioapi_0.5.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/withr/withr_1.0.1.tar.gz \
-  && R CMD INSTALL withr_1.0.1.tar.gz \
-  && rm withr_1.0.1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/devtools/devtools_1.11.1.tar.gz \
-  && R CMD INSTALL devtools_1.11.1.tar.gz \
-  && rm devtools_1.11.1.tar.gz
+  && ./cran-install.sh jsonlite 0.9.19 \
+  && ./cran-install.sh mime 0.4 \
+  && ./cran-install.sh curl 0.9.7 \
+  && ./cran-install.sh digest 0.6.12 \
+  && ./cran-install.sh R6 2.1.2 \
+  && ./cran-install.sh magrittr 1.5 \
+  && ./cran-install.sh stringi 1.0-1 \
+  && ./cran-install.sh stringr 1.0.0 \
+  && ./cran-install.sh openssl 0.9.3 \
+  && ./cran-install.sh httr 1.1.0 \
+  && ./cran-install.sh git2r 0.14.0  \
+  && ./cran-install.sh memoise 1.0.0 \
+  && ./cran-install.sh whisker 0.3-2 \
+  && ./cran-install.sh rstudioapi 0.5 \
+  && ./cran-install.sh withr 1.0.1 \
+  && ./cran-install.sh devtools 1.11.1 \
 
 ## Install assertthat
-RUN wget https://cran.rstudio.com/src/contrib/assertthat_0.1.tar.gz \
-  && R CMD INSTALL assertthat_0.1.tar.gz \
-  && rm assertthat_0.1.tar.gz
+RUN  ./cran-install.sh assertthat 0.1 \
 
 ## Install dplyr and dependencies
-RUN wget https://cran.rstudio.com/src/contrib/Archive/Rcpp/Rcpp_0.12.4.tar.gz \
-  && R CMD INSTALL Rcpp_0.12.4.tar.gz \
-  && rm Rcpp_0.12.4.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/lazyeval/lazyeval_0.1.10.tar.gz\
-  && R CMD INSTALL lazyeval_0.1.10.tar.gz \
-  && rm lazyeval_0.1.10.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/DBI/DBI_0.4-1.tar.gz \
-  && R CMD INSTALL DBI_0.4-1.tar.gz \
-  && rm DBI_0.4-1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/BH/BH_1.60.0-2.tar.gz \
-  && R CMD INSTALL BH_1.60.0-2.tar.gz \
-  && rm BH_1.60.0-2.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/dplyr/dplyr_0.4.3.tar.gz \
-  && R CMD INSTALL dplyr_0.4.3.tar.gz \
-  && rm dplyr_0.4.3.tar.gz
+RUN  ./cran-install.sh Rcpp 0.12.4 \
+  && ./cran-install.sh lazyeval 0.1.10 \
+  && ./cran-install.sh DBI 0.4-1 \
+  && ./cran-install.sh BH 1.60.0-2 \
+  && ./cran-install.sh dplyr 0.4.3 \
 
 ## Install plyr
-RUN wget https://cran.rstudio.com/src/contrib/Archive/plyr/plyr_1.8.3.tar.gz \
-  && R CMD INSTALL plyr_1.8.3.tar.gz \
-  && rm plyr_1.8.3.tar.gz
+RUN  ./cran-install.sh plyr 1.8.3 \
 
 ## Install lubridate
-RUN wget https://cran.rstudio.com/src/contrib/Archive/lubridate/lubridate_1.5.6.tar.gz \
-  && R CMD INSTALL lubridate_1.5.6.tar.gz \
-  && rm lubridate_1.5.6.tar.gz
+RUN  ./cran-install.sh lubridate 1.5.6 \
 
 ## Install freetds
 RUN apt-get update \
@@ -108,193 +60,83 @@ RUN apt-get update \
     libodbc1 \
     unixodbc-dev \
   && apt-get clean \
-  && wget https://cran.rstudio.com/src/contrib/Archive/RODBC/RODBC_1.3-13.tar.gz \
-  && R CMD INSTALL RODBC_1.3-13.tar.gz \
-  && rm RODBC_1.3-13.tar.gz
+  && ./cran-install.sh RODBC 1.3-13 \
 
 ## Install testthat and dependencies
-RUN wget https://cran.rstudio.com/src/contrib/Archive/crayon/crayon_1.3.1.tar.gz \
-  && R CMD INSTALL crayon_1.3.1.tar.gz \
-  && rm crayon_1.3.1.tar.gz \
-  && wget https://github.com/cran/praise/archive/1.0.0.tar.gz \
-  && R CMD INSTALL 1.0.0.tar.gz \
-  && rm 1.0.0.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/testthat_1.0.2.tar.gz \
-  && R CMD INSTALL testthat_1.0.2.tar.gz \
-  && rm testthat_1.0.2.tar.gz
+RUN  ./cran-install.sh crayon 1.3.1 \
+  && ./cran-install.sh praise 1.0.0 \
+  && ./cran-install.sh testthat 1.0.2 \
 
 ## Install rmarkdown and dependencies
-RUN wget https://github.com/cran/yaml/archive/2.1.13.tar.gz \
-  && R CMD INSTALL 2.1.13.tar.gz \
-  && rm 2.1.13.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/evaluate/evaluate_0.9.tar.gz \
-  && R CMD INSTALL evaluate_0.9.tar.gz \
-  && rm evaluate_0.9.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/formatR/formatR_1.3.tar.gz \
-  && R CMD INSTALL formatR_1.3.tar.gz \
-  && rm formatR_1.3.tar.gz \
-  && wget https://github.com/cran/highr/archive/0.5.1.tar.gz \
-  && R CMD INSTALL 0.5.1.tar.gz \
-  && rm 0.5.1.tar.gz \
-  && wget https://github.com/cran/markdown/archive/0.7.7.tar.gz \
-  && R CMD INSTALL 0.7.7.tar.gz \
-  && rm 0.7.7.tar.gz \
-  && wget https://github.com/cran/knitr/archive/1.12.3.tar.gz \
-  && R CMD INSTALL 1.12.3.tar.gz \
-  && rm 1.12.3.tar.gz \
-  && wget https://github.com/cran/bitops/archive/1.0-6.tar.gz \
-  && R CMD INSTALL 1.0-6.tar.gz \
-  && rm 1.0-6.tar.gz \
-  && wget https://github.com/cran/caTools/archive/1.17.1.tar.gz \
-  && R CMD INSTALL 1.17.1.tar.gz \
-  && rm 1.17.1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/htmltools_0.3.5.tar.gz \
-  && R CMD INSTALL htmltools_0.3.5.tar.gz \
-  && rm htmltools_0.3.5.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/rmarkdown/rmarkdown_0.9.6.tar.gz \
-  && R CMD INSTALL rmarkdown_0.9.6.tar.gz \
-  && rm rmarkdown_0.9.6.tar.gz
+RUN  ./cran-install.sh yaml 2.1.13 \
+  && ./cran-install.sh evaluate 0.9 \
+  && ./cran-install.sh formatR 1.3 \
+  && ./cran-install.sh highr 0.5.1 \
+  && ./cran-install.sh markdown 0.7.7 \
+  && ./cran-install.sh knitr 1.12.3 \
+  && ./cran-install.sh bitops 1.0-6 \
+  && ./cran-install.sh caTools 1.17.1 \
+  && ./cran-install.sh htmltools 0.3.5 \
+  && ./cran-install.sh rmarkdown 0.9.6 \
 
 ## Install covr and dependencies
-RUN wget https://cran.rstudio.com/src/contrib/rex_1.1.1.tar.gz \
-  && R CMD INSTALL rex_1.1.1.tar.gz \
-  && rm rex_1.1.1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/covr/covr_2.0.1.tar.gz \
-  && R CMD INSTALL covr_2.0.1.tar.gz \
-  && rm covr_2.0.1.tar.gz
+RUN  ./cran-install.sh rex 1.1.1 \
+  && ./cran-install.sh covr 2.0.1 \
 
 ## Install ggplot2 and dependencies
-RUN wget https://github.com/cran/colorspace/archive/1.2-6.tar.gz \
-  && R CMD INSTALL 1.2-6.tar.gz \
-  && rm 1.2-6.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/munsell_0.4.3.tar.gz \
-  && R CMD INSTALL munsell_0.4.3.tar.gz \
-  && rm munsell_0.4.3.tar.gz \
-  && wget https://github.com/cran/RColorBrewer/archive/1.1-2.tar.gz \
-  && R CMD INSTALL 1.1-2.tar.gz \
-  && rm 1.1-2.tar.gz \
-  && wget https://github.com/cran/dichromat/archive/2.0-0.tar.gz \
-  && R CMD INSTALL 2.0-0.tar.gz \
-  && rm 2.0-0.tar.gz \
-  && wget https://github.com/cran/labeling/archive/0.3.tar.gz \
-  && R CMD INSTALL 0.3.tar.gz \
-  && rm 0.3.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/scales/scales_0.4.0.tar.gz \
-  && R CMD INSTALL scales_0.4.0.tar.gz \
-  && rm scales_0.4.0.tar.gz \
-  && wget https://github.com/cran/reshape2/archive/1.4.1.tar.gz \
-  && R CMD INSTALL 1.4.1.tar.gz \
-  && rm 1.4.1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/gtable_0.2.0.tar.gz \
-  && R CMD INSTALL gtable_0.2.0.tar.gz \
-  && rm gtable_0.2.0.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/ggplot2/ggplot2_2.1.0.tar.gz \
-  && R CMD INSTALL ggplot2_2.1.0.tar.gz \
-  && rm ggplot2_2.1.0.tar.gz
+RUN  ./cran-install.sh colorspace 1.2-6 \
+  && ./cran-install.sh munsell 0.4.3 \
+  && ./cran-install.sh RColorBrewer 1.1-2 \
+  && ./cran-install.sh dichromat 2.0-0 \
+  && ./cran-install.sh labeling 0.3 \
+  && ./cran-install.sh scales 0.4.0 \
+  && ./cran-install.sh reshape2 1.4.1 \
+  && ./cran-install.sh gtable 0.2.0 \
+  && ./cran-install.sh ggplot2 2.1.0 \
 
 ## Install xtable
-RUN wget https://cran.rstudio.com/src/contrib/xtable_1.8-2.tar.gz \
-  && R CMD INSTALL xtable_1.8-2.tar.gz \
-  && rm xtable_1.8-2.tar.gz
+RUN  ./cran-install.sh xtable 1.8-2 \
 
 ## Install igraph and its dependencies
-RUN wget https://github.com/cran/registry/archive/0.3.tar.gz \
-  && R CMD INSTALL 0.3.tar.gz \
-  && rm 0.3.tar.gz \
-  && wget https://github.com/cran/pkgmaker/archive/0.22.tar.gz \
-  && R CMD INSTALL 0.22.tar.gz \
-  && rm 0.22.tar.gz \
-  && wget https://github.com/cran/rngtools/archive/1.2.4.tar.gz \
-  && R CMD INSTALL 1.2.4.tar.gz \
-  && rm 1.2.4.tar.gz \
-  && wget https://github.com/cran/gridBase/archive/0.4-7.tar.gz \
-  && R CMD INSTALL 0.4-7.tar.gz \
-  && rm 0.4-7.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/iterators_1.0.8.tar.gz \
-  && R CMD INSTALL iterators_1.0.8.tar.gz \
-  && rm iterators_1.0.8.tar.gz \
-  && wget https://github.com/cran/foreach/archive/1.4.3.tar.gz \
-  && R CMD INSTALL 1.4.3.tar.gz \
-  && rm 1.4.3.tar.gz \
-  && wget https://github.com/cran/doParallel/archive/1.0.10.tar.gz \
-  && R CMD INSTALL 1.0.10.tar.gz \
-  && rm 1.0.10.tar.gz \
-  && wget https://github.com/cran/NMF/archive/0.20.6.tar.gz \
-  && R CMD INSTALL 0.20.6.tar.gz \
-  && rm 0.20.6.tar.gz \
-  && wget https://github.com/cran/irlba/archive/2.0.0.tar.gz \
-  && R CMD INSTALL 2.0.0.tar.gz \
-  && rm 2.0.0.tar.gz \
-  && wget https://github.com/cran/igraph/archive/1.0.1.tar.gz \
-  && R CMD INSTALL 1.0.1.tar.gz \
-  && rm 1.0.1.tar.gz
+RUN  ./cran-install.sh registry 0.3 \
+  && ./cran-install.sh pkgmaker 0.22 \
+  && ./cran-install.sh rngtools 1.2.4 \
+  && ./cran-install.sh gridBase 0.4-7 \
+  && ./cran-install.sh iterators 1.0.8 \
+  && ./cran-install.sh foreach 1.4.3 \
+  && ./cran-install.sh doParallel 1.0.10 \
+  && ./cran-install.sh NMF 0.20.6 \
+  && ./cran-install.sh irlba 2.0.0 \
+  && ./cran-install.sh igraph 1.0.1 \
 
 ## install lintr and dependencies
-RUN wget https://github.com/cran/stringdist/archive/0.9.4.1.tar.gz \
-  && R CMD INSTALL 0.9.4.1.tar.gz \
-  && rm 0.9.4.1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/lintr_1.0.0.tar.gz \
-  && R CMD INSTALL lintr_1.0.0.tar.gz \
-  && rm lintr_1.0.0.tar.gz
+RUN  ./cran-install.sh stringdist 0.9.4.1 \
+  && ./cran-install.sh lintr 1.0.0 \
 
 ## install sp
-RUN wget https://cran.rstudio.com/src/contrib/Archive/sp/sp_1.2-3.tar.gz \
-  && R CMD INSTALL sp_1.2-3.tar.gz \
-  && rm sp_1.2-3.tar.gz
+RUN  ./cran-install.sh sp 1.2-3 \
 
 ## install tidyr
-RUN wget https://github.com/cran/tidyr/archive/0.4.1.tar.gz \
-  && R CMD INSTALL 0.4.1.tar.gz \
-  && rm 0.4.1.tar.gz
+RUN  ./cran-install.sh tidyr 0.4.1 \
 
 ## install lme4
-RUN wget https://github.com/cran/minqa/archive/1.2.4.tar.gz \
-  && R CMD INSTALL 1.2.4.tar.gz \
-  && rm 1.2.4.tar.gz \
-  && wget https://github.com/cran/nloptr/archive/1.0.4.tar.gz \
-  && R CMD INSTALL 1.0.4.tar.gz \
-  && rm 1.0.4.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/RcppEigen/RcppEigen_0.3.2.8.1.tar.gz \
-  && R CMD INSTALL RcppEigen_0.3.2.8.1.tar.gz \
-  && rm RcppEigen_0.3.2.8.1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/lme4_1.1-12.tar.gz \
-  && R CMD INSTALL lme4_1.1-12.tar.gz \
-  && rm lme4_1.1-12.tar.gz
+RUN  ./cran-install.sh minga 1.2.4 \
+  && ./cran-install.sh nloptr 1.0.4 \
+  && ./cran-install.sh RcppEigen 0.3.2.8.1 \
+  && ./cran-install.sh lme4 1.1-12 \
 
 ## install optimx and dependencies
-RUN wget https://github.com/cran/numDeriv/archive/2014.2-1.tar.gz \
-  && R CMD INSTALL 2014.2-1.tar.gz \
-  && rm 2014.2-1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/optextras/optextras_2013-10.28.tar.gz \
-  && R CMD INSTALL optextras_2013-10.28.tar.gz \
-  && rm optextras_2013-10.28.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Rvmmin_2013-11.12.tar.gz \
-  && R CMD INSTALL Rvmmin_2013-11.12.tar.gz \
-  && rm Rvmmin_2013-11.12.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Rcgmin_2013-2.21.tar.gz \
-  && R CMD INSTALL Rcgmin_2013-2.21.tar.gz \
-  && rm Rcgmin_2013-2.21.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/quadprog_1.5-5.tar.gz \
-  && R CMD INSTALL quadprog_1.5-5.tar.gz \
-  && rm quadprog_1.5-5.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/BB_2014.10-1.tar.gz \
-  && R CMD INSTALL BB_2014.10-1.tar.gz \
-  && rm BB_2014.10-1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/ucminf/ucminf_1.1-3.tar.gz \
-  && R CMD INSTALL ucminf_1.1-3.tar.gz \
-  && rm ucminf_1.1-3.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/setRNG_2013.9-1.tar.gz \
-  && R CMD INSTALL setRNG_2013.9-1.tar.gz \
-  && rm setRNG_2013.9-1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/dfoptim/dfoptim_2011.8-1.tar.gz \
-  && R CMD INSTALL dfoptim_2011.8-1.tar.gz \
-  && rm dfoptim_2011.8-1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/svUnit_0.7-12.tar.gz \
-  && R CMD INSTALL svUnit_0.7-12.tar.gz \
-  && rm svUnit_0.7-12.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/optimx_2013.8.7.tar.gz \
-  && R CMD INSTALL optimx_2013.8.7.tar.gz \
-  && rm optimx_2013.8.7.tar.gz
+RUN  ./cran-install.sh numDeriv 2014.2-1 \
+  && ./cran-install.sh optextras 2013-10.28 \
+  && ./cran-install.sh Rvmmin 2013-11.12 \
+  && ./cran-install.sh Rcgmin 2013-2.21 \
+  && ./cran-install.sh quadprog 1.5-5 \
+  && ./cran-install.sh BB 2014.10-1 \
+  && ./cran-install.sh ucminf 1.1-3 \
+  && ./cran-install.sh setRNG 2013.9-1 \
+  && ./cran-install.sh dfoptim 2011.8-1 \
+  && ./cran-install.sh svUnit 0.7-12 \
+  && ./cran-install.sh optimx 2013.8.7 \
 
 ## install INLA
 RUN wget https://github.com/inbo/INLA/archive/v0.0-1455098891.tar.gz \
@@ -302,43 +144,27 @@ RUN wget https://github.com/inbo/INLA/archive/v0.0-1455098891.tar.gz \
   && rm v0.0-1455098891.tar.gz
 
 ## install roxygen2 and dependencies
-RUN wget https://github.com/cran/brew/archive/1.0-6.tar.gz \
-  && R CMD INSTALL 1.0-6.tar.gz \
-  && rm 1.0-6.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/Archive/roxygen2/roxygen2_5.0.1.tar.gz \
-  && R CMD INSTALL roxygen2_5.0.1.tar.gz \
-  && rm roxygen2_5.0.1.tar.gz
+RUN  ./cran-install.sh brew 1.0-6 \
+  && ./cran-install.sh roxygen2 5.0.1 \
 
 ## install RSQLite
-RUN wget https://github.com/cran/RSQLite/archive/1.0.0.tar.gz \
-  && R CMD INSTALL 1.0.0.tar.gz \
-  && rm 1.0.0.tar.gz
+RUN  ./cran-install.sh RSQLite 1.0.0 \
 
 ## install rmvtnorm
-RUN wget https://cran.rstudio.com/src/contrib/mvtnorm_1.0-5.tar.gz \
-  && R CMD INSTALL mvtnorm_1.0-5.tar.gz \
-  && rm mvtnorm_1.0-5.tar.gz
+RUN  ./cran-install.sh mvtnorm 1.0-5 \
 
 ## install snowfall
-RUN wget https://cran.rstudio.com/src/contrib/snow_0.4-2.tar.gz \
-  && R CMD INSTALL snow_0.4-2.tar.gz \
-  && rm snow_0.4-2.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/snowfall_1.84-6.1.tar.gz \
-  && R CMD INSTALL snowfall_1.84-6.1.tar.gz \
-  && rm snowfall_1.84-6.1.tar.gz
+RUN  ./cran-install.sh snow 0.4-2 \
+  && ./cran-install.sh snowfall 1.84-6.1 \
 
 ## install rgeos
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
      libgeos++-dev \
-  && wget https://cran.rstudio.com/src/contrib/Archive/rgeos/rgeos_0.3-21.tar.gz \
-  && R CMD INSTALL rgeos_0.3-21.tar.gz \
-  && rm rgeos_0.3-21.tar.gz
+  && ./cran-install.sh rgeos 0.3-21 \
 
 ## install multimput
-RUN wget https://cran.rstudio.com/src/contrib/tibble_1.2.tar.gz \
-  && R CMD INSTALL tibble_1.2.tar.gz \
-  && rm tibble_1.2.tar.gz \
+RUN  ./cran-install.sh tibble 1.2 \
   && wget https://github.com/inbo/multimput/archive/v0.2.5.tar.gz \
   && R CMD INSTALL v0.2.5.tar.gz \
   && rm v0.2.5.tar.gz
@@ -347,24 +173,16 @@ RUN wget https://cran.rstudio.com/src/contrib/tibble_1.2.tar.gz \
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     libxml2-dev \
-  && wget https://cran.rstudio.com/src/contrib/Archive/xml2/xml2_1.1.0.tar.gz \
-  && R CMD INSTALL xml2_1.1.0.tar.gz \
-  && rm xml2_1.1.0.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/base64enc_0.1-3.tar.gz \
-  && R CMD INSTALL base64enc_0.1-3.tar.gz \
-  && rm base64enc_0.1-3.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/aws.signature_0.2.6.tar.gz \
-  && R CMD INSTALL aws.signature_0.2.6.tar.gz \
-  && rm aws.signature_0.2.6.tar.gz \
+  && ./cran-install.sh xml2 1.1.0 \
+  && ./cran-install.sh base64enc 0.1-3 \
+  && ./cran-install.sh aws.signature 0.2.6 \
   && Rscript -e "devtools::install_github('cloudyr/aws.s3', ref = 'a223d2728f8f01e4176495038c3d582bd400a9d2', dependencies = FALSE, upgrade_dependencies = FALSE)"
 
 ## install RPostgreSQL
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     libpq-dev \
-  && wget https://cran.rstudio.com/src/contrib/RPostgreSQL_0.4-1.tar.gz \
-  && R CMD INSTALL RPostgreSQL_0.4-1.tar.gz \
-  && rm RPostgreSQL_0.4-1.tar.gz
+  && ./cran-install.sh RPostgreSQL 0.4-1 \
 
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]
