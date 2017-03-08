@@ -117,7 +117,7 @@ RUN  ./cran-install.sh sp 1.2-3
 RUN  ./cran-install.sh tidyr 0.4.1
 
 ## install lme4
-RUN  ./cran-install.sh minga 1.2.4  \
+RUN  ./cran-install.sh minqa 1.2.4  \
   && ./cran-install.sh nloptr 1.0.4  \
   && ./cran-install.sh RcppEigen 0.3.2.8.1  \
   && ./cran-install.sh lme4 1.1-12
