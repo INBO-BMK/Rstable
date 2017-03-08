@@ -162,7 +162,8 @@ RUN apt-get update \
   && ./cran_install.sh roxygen2 6.0.1
 
 ## install RSQLite
-RUN  ./cran_install.sh RSQLite 1.1-2
+RUN  ./cran_install.sh plogr 0.1-1 \
+  && ./cran_install.sh RSQLite 1.1-2
 
 ## install rmvtnorm
 RUN  ./cran_install.sh mvtnorm 1.0-6

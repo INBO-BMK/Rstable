@@ -95,6 +95,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |          optextras |        2016-8.8 | 
 |             optimx |        2013.8.7 | 
 |           pkgmaker |            0.22 | 
+|              plogr |           0.1-1 | 
 |               plyr |           1.8.4 | 
 |             praise |           1.0.0 | 
 |           quadprog |           1.5-5 | 
