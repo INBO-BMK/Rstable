@@ -50,9 +50,11 @@ A stable Docker image with R. The version of most software is hard-coded.
 |               brew |           1.0-6 | 
 |            caTools |          1.17.1 | 
 |         colorspace |           1.3-0 | 
+|         commonmark |             1.2 | 
 |               covr |           2.2.2 | 
 |             crayon |           1.3.2 | 
 |               curl |             2.3 | 
+|               desc |           1.1.0 | 
 |           devtools |          1.12.0 | 
 |            dfoptim |        2016.7-1 | 
 |          dichromat |           2.0-0 | 

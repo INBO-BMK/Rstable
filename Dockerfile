@@ -152,7 +152,13 @@ RUN  ./cran_install.sh MatrixModels 0.4-1 \
   && rm v0.0-1485844051.tar.gz
 
 ## install roxygen2 and dependencies
-RUN  ./cran_install.sh brew 1.0-6 \
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    libxml2-dev \
+  && ./cran_install.sh xml2 1.1.1 \
+  && ./cran_install.sh brew 1.0-6 \
+  && ./cran_install.sh desc 1.1.0 \
+  && ./cran_install.sh commonmark 1.2 \
   && ./cran_install.sh roxygen2 6.0.1
 
 ## install RSQLite
@@ -177,11 +183,7 @@ RUN wget https://github.com/inbo/multimput/archive/v0.2.6.tar.gz \
   && rm v0.2.6.tar.gz
 
 ## install aws.s3
-RUN apt-get update \
-  && apt-get install -y --no-install-recommends \
-    libxml2-dev \
-  && ./cran_install.sh xml2 1.1.1 \
-  && ./cran_install.sh aws.signature 0.2.6 \
+RUN  ./cran_install.sh aws.signature 0.2.6 \
   && Rscript -e "devtools::install_github('cloudyr/aws.s3', ref = '7cbfa344b00032e27514f6c7c9314fde775048f4', dependencies = FALSE, upgrade_dependencies = FALSE)"
 
 ## install RPostgreSQL
