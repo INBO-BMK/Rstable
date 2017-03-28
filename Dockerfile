@@ -193,5 +193,8 @@ RUN apt-get update \
     libpq-dev \
   && ./cran_install.sh RPostgreSQL 0.4-1
 
+## install pander
+RUN  ./cran_install.sh pander 0.6.0
+
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]
