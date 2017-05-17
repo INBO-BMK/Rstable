@@ -54,6 +54,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |         commonmark |             1.2 | 
 |               covr |           2.2.2 | 
 |             crayon |           1.3.2 | 
+|          crosstalk |           1.0.0 | 
 |               curl |             2.6 | 
 |               desc |           1.1.0 | 
 |           devtools |          1.13.1 | 
@@ -69,9 +70,11 @@ A stable Docker image with R. The version of most software is hard-coded.
 |              git2r |          0.18.0 | 
 |           gridBase |           0.4-7 | 
 |             gtable |           0.2.0 | 
+|             hexbin |          1.27.1 | 
 |              highr |             0.6 | 
 |          htmltools |           0.3.6 | 
 |        htmlwidgets |             0.8 | 
+|             httpuv |           1.3.3 | 
 |               httr |           1.2.1 | 
 |             igraph |           1.0.1 | 
 |              irlba |           2.2.1 | 
@@ -99,8 +102,10 @@ A stable Docker image with R. The version of most software is hard-coded.
 |             pander |           0.6.0 | 
 |           pkgmaker |            0.22 | 
 |              plogr |           0.1-1 | 
+|             plotly |           4.6.0 | 
 |               plyr |           1.8.4 | 
 |             praise |           1.0.0 | 
+|              purrr |         0.2.2.2 | 
 |           quadprog |           1.5-5 | 
 |           registry |             0.3 | 
 |           reshape2 |           1.4.2 | 
@@ -114,8 +119,10 @@ A stable Docker image with R. The version of most software is hard-coded.
 |         rstudioapi |             0.6 | 
 |             scales |           0.4.1 | 
 |             setRNG |        2013.9-1 | 
+|              shiny |           1.0.3 | 
 |               snow |           0.4-2 | 
 |           snowfall |        1.84-6.1 | 
+|        sourcetools |           0.1.6 | 
 |                 sp |           1.2-4 | 
 |         stringdist |         0.9.4.4 | 
 |            stringi |           1.1.5 | 
@@ -125,6 +132,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |             tibble |           1.3.1 | 
 |              tidyr |           0.6.3 | 
 |             ucminf |           1.1-4 | 
+|        viridisLite |           0.2.0 | 
 |            whisker |           0.3-2 | 
 |              withr |           1.0.2 | 
 |               xml2 |           1.1.1 | 
