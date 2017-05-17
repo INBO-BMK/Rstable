@@ -29,6 +29,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |                 BB |       2014.10-1 | 
 |                 BH |        1.62.0-1 | 
 |                DBI |           0.6-1 | 
+|                 DT |             0.2 | 
 |               INLA |  0.0-1485844051 | 
 |       MatrixModels |           0.4-1 | 
 |                NMF |          0.20.6 | 
@@ -70,6 +71,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |             gtable |           0.2.0 | 
 |              highr |             0.6 | 
 |          htmltools |           0.3.6 | 
+|        htmlwidgets |             0.8 | 
 |               httr |           1.2.1 | 
 |             igraph |           1.0.1 | 
 |              irlba |           2.2.1 | 

@@ -197,5 +197,9 @@ RUN apt-get update \
 ## install pander
 RUN  ./cran_install.sh pander 0.6.0
 
+## install DT
+RUN  ./cran_install.sh htmlwidgets 0.8 \
+  && ./cran_install.sh DT 0.2
+
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]
