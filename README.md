@@ -114,6 +114,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |           registry |             0.3 | 
 |           reshape2 |           1.4.2 | 
 |                rex |           1.1.1 | 
+|              rgdal |           1.2-7 | 
 |              rgeos |          0.3-23 | 
 |              rlang |             0.1 | 
 |          rmarkdown |             1.5 | 

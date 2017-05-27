@@ -217,5 +217,13 @@ RUN  ./cran_install.sh XML 3.98-1.7 \
   && ./cran_install.sh geosphere 1.5-5 \
   && ./cran_install.sh osmar 1.1-7
 
+## install rgdal
+RUN apt-get update \
+  && apt-get install  -y --no-install-recommends \
+    libgdal-dev \
+    libproj-dev \
+  && apt-get clean \
+  && ./cran_install.sh rgdal 1.2-7
+
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]
