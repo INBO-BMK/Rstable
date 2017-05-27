@@ -35,6 +35,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |                NMF |          0.20.6 | 
 |                 R6 |           2.2.1 | 
 |       RColorBrewer |           1.1-2 | 
+|              RCurl |        1.95-4.8 | 
 |              RODBC |          1.3-15 | 
 |        RPostgreSQL |           0.4-1 | 
 |            RSQLite |           1.1-2 | 
@@ -42,6 +43,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |               Rcpp |         0.12.10 | 
 |          RcppEigen |       0.3.3.3.0 | 
 |             Rvmmin |      2013-11.12 | 
+|                XML |        3.98-1.7 | 
 |         assertthat |           0.2.0 | 
 |             aws.s3 |           0.3.1 | 
 |      aws.signature |           0.2.9 | 
@@ -66,6 +68,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |           evaluate |            0.10 | 
 |            foreach |           1.4.3 | 
 |            formatR |             1.5 | 
+|          geosphere |           1.5-5 | 
 |            ggplot2 |           2.2.1 | 
 |              git2r |          0.18.0 | 
 |           gridBase |           0.4-7 | 
@@ -99,6 +102,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |            openssl |           0.9.6 | 
 |          optextras |        2016-8.8 | 
 |             optimx |        2013.8.7 | 
+|              osmar |           1.1-7 | 
 |             pander |           0.6.0 | 
 |           pkgmaker |            0.22 | 
 |              plogr |           0.1-1 | 

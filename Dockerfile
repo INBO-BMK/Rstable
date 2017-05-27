@@ -211,5 +211,11 @@ RUN  ./cran_install.sh httpuv 1.3.3 \
   && ./cran_install.sh viridisLite 0.2.0 \
   && ./cran_install.sh plotly 4.6.0
 
+## install osmar
+RUN  ./cran_install.sh XML 3.98-1.7 \
+  && ./cran_install.sh RCurl 1.95-4.8 \
+  && ./cran_install.sh geosphere 1.5-5 \
+  && ./cran_install.sh osmar 1.1-7
+
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]
