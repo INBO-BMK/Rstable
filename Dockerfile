@@ -10,6 +10,7 @@ COPY cran_install.sh cran_install.sh
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     libcurl4-openssl-dev \
+    curl \
     git \
     libssl-dev \
     libssh2-1-dev \
