@@ -79,7 +79,7 @@ RUN  ./cran_install.sh yaml 2.1.14 \
   && ./cran_install.sh formatR 1.5 \
   && ./cran_install.sh highr 0.6 \
   && ./cran_install.sh markdown 0.8 \
-  && ./cran_install.sh knitr 1.15.1 \
+  && ./cran_install.sh knitr 1.16 \
   && ./cran_install.sh bitops 1.0-6 \
   && ./cran_install.sh caTools 1.17.1 \
   && ./cran_install.sh htmltools 0.3.6 \
@@ -225,6 +225,11 @@ RUN apt-get update \
     libproj-dev \
   && apt-get clean \
   && ./cran_install.sh rgdal 1.2-7
+
+## install bookdown and webshot
+RUN  ./cran_install.sh bookdown 0.4 \
+  && ./cran_install.sh webshot 0.4.1 \
+  && Rscript -e "webshot::install_phantomjs()"
 
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]

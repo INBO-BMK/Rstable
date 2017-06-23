@@ -50,6 +50,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |          backports |           1.0.5 | 
 |          base64enc |           0.1-3 | 
 |             bitops |           1.0-6 | 
+|           bookdown |             0.4 | 
 |               brew |           1.0-6 | 
 |            caTools |          1.17.1 | 
 |         colorspace |           1.3-2 | 
@@ -83,7 +84,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |              irlba |           2.2.1 | 
 |          iterators |           1.0.8 | 
 |           jsonlite |             1.4 | 
-|              knitr |          1.15.1 | 
+|              knitr |            1.16 | 
 |           labeling |             0.3 | 
 |           lazyeval |           0.2.0 | 
 |              lintr |           1.0.0 | 
@@ -138,6 +139,7 @@ A stable Docker image with R. The version of most software is hard-coded.
 |              tidyr |           0.6.3 | 
 |             ucminf |           1.1-4 | 
 |        viridisLite |           0.2.0 | 
+|            webshot |           0.4.1 | 
 |            whisker |           0.3-2 | 
 |              withr |           1.0.2 | 
 |               xml2 |           1.1.1 | 
