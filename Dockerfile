@@ -36,13 +36,13 @@ RUN apt-get update \
 RUN  ./cran_install.sh assertthat 0.2.0
 
 ## Install dplyr and dependencies
-RUN  ./cran_install.sh Rcpp 0.12.10 \
+RUN  ./cran_install.sh Rcpp 0.12.12 \
   && ./cran_install.sh lazyeval 0.2.0 \
-  && ./cran_install.sh DBI 0.6-1 \
+  && ./cran_install.sh DBI 0.7 \
   && ./cran_install.sh BH 1.62.0-1 \
   && ./cran_install.sh rlang 0.1 \
-  && ./cran_install.sh tibble 1.3.1 \
-  && ./cran_install.sh dplyr 0.5.0
+  && ./cran_install.sh tibble 1.3.3 \
+  && ./cran_install.sh dplyr 0.7.2
 
 ## Install plyr
 RUN  ./cran_install.sh plyr 1.8.4
