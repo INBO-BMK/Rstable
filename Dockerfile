@@ -112,7 +112,10 @@ RUN  ./cran_install.sh colorspace 1.3-2 \
 RUN  ./cran_install.sh xtable 1.8-2
 
 ## Install igraph and its dependencies
-RUN  ./cran_install.sh registry 0.3 \
+RUN  apt-get update \
+  && apt-get install -y --no-install-recommends \
+    libxml2-dev \
+  && ./cran_install.sh registry 0.3 \
   && ./cran_install.sh pkgmaker 0.22 \
   && ./cran_install.sh rngtools 1.2.4 \
   && ./cran_install.sh gridBase 0.4-7 \
@@ -159,10 +162,7 @@ RUN  ./cran_install.sh MatrixModels 0.4-1 \
   && rm v17.06.20.tar.gz
 
 ## install roxygen2 and dependencies
-RUN apt-get update \
-  && apt-get install -y --no-install-recommends \
-    libxml2-dev \
-  && ./cran_install.sh xml2 1.1.1 \
+RUN ./cran_install.sh xml2 1.1.1 \
   && ./cran_install.sh brew 1.0-6 \
   && ./cran_install.sh desc 1.1.0 \
   && ./cran_install.sh commonmark 1.2 \
