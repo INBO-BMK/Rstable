@@ -123,7 +123,7 @@ RUN  ./cran_install.sh stringdist 0.9.4.4 \
   && ./cran_install.sh lintr 1.0.0
 
 ## install sp
-RUN  ./cran_install.sh sp 1.2-4
+RUN  ./cran_install.sh sp 1.2-5
 
 ## install tidyr
 RUN  ./cran_install.sh tidyr 0.6.3
