@@ -1,4 +1,4 @@
-FROM inbobmk/rlatex:3.4.0
+FROM inbobmk/rlatex:3.4.1
 
 ## This handle reaches Thierry
 MAINTAINER "Thierry Onkelinx" thierry.onkelinx@inbo.be
