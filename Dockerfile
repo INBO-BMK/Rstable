@@ -224,7 +224,7 @@ RUN apt-get update \
     libgdal-dev \
     libproj-dev \
   && apt-get clean \
-  && ./cran_install.sh rgdal 1.2-7
+  && ./cran_install.sh rgdal 1.2-8
 
 ## install bookdown and webshot
 RUN  ./cran_install.sh bookdown 0.4 \
