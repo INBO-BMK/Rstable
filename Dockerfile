@@ -15,22 +15,22 @@ RUN apt-get update \
     libssl-dev \
     libssh2-1-dev \
   && apt-get clean \
-  && ./cran_install.sh jsonlite 1.4 \
+  && ./cran_install.sh jsonlite 1.5 \
   && ./cran_install.sh mime 0.5 \
-  && ./cran_install.sh curl 2.6 \
+  && ./cran_install.sh curl 2.8.1 \
   && ./cran_install.sh digest 0.6.12 \
-  && ./cran_install.sh R6 2.2.1 \
+  && ./cran_install.sh R6 2.2.2 \
   && ./cran_install.sh magrittr 1.5 \
   && ./cran_install.sh stringi 1.1.5 \
   && ./cran_install.sh stringr 1.2.0 \
   && ./cran_install.sh openssl 0.9.6 \
   && ./cran_install.sh httr 1.2.1 \
-  && ./cran_install.sh git2r 0.18.0  \
+  && ./cran_install.sh git2r 0.19.0  \
   && ./cran_install.sh memoise 1.1.0 \
   && ./cran_install.sh whisker 0.3-2 \
   && ./cran_install.sh rstudioapi 0.6 \
   && ./cran_install.sh withr 1.0.2 \
-  && ./cran_install.sh devtools 1.13.1
+  && ./cran_install.sh devtools 1.13.2
 
 ## Install assertthat
 RUN  ./cran_install.sh assertthat 0.2.0
