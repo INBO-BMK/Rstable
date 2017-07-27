@@ -75,7 +75,7 @@ RUN  ./cran_install.sh crayon 1.3.2 \
 
 ## Install rmarkdown and dependencies
 RUN  ./cran_install.sh yaml 2.1.14 \
-  && ./cran_install.sh evaluate 0.10 \
+  && ./cran_install.sh evaluate 0.10.1 \
   && ./cran_install.sh formatR 1.5 \
   && ./cran_install.sh highr 0.6 \
   && ./cran_install.sh markdown 0.8 \
@@ -84,9 +84,9 @@ RUN  ./cran_install.sh yaml 2.1.14 \
   && ./cran_install.sh caTools 1.17.1 \
   && ./cran_install.sh htmltools 0.3.6 \
   && ./cran_install.sh base64enc 0.1-3 \
-  && ./cran_install.sh backports 1.0.5 \
+  && ./cran_install.sh backports 1.1.0 \
   && ./cran_install.sh rprojroot 1.2 \
-  && ./cran_install.sh rmarkdown 1.5
+  && ./cran_install.sh rmarkdown 1.6
 
 ## Install covr and dependencies
 RUN  ./cran_install.sh rex 1.1.1 \
