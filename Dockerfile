@@ -203,14 +203,14 @@ RUN  ./cran_install.sh htmlwidgets 0.9 \
   && ./cran_install.sh DT 0.2
 
 ## install plotly
-RUN  ./cran_install.sh httpuv 1.3.3 \
+RUN  ./cran_install.sh httpuv 1.3.5 \
   && ./cran_install.sh sourcetools 0.1.6 \
   && ./cran_install.sh shiny 1.0.3 \
   && ./cran_install.sh hexbin 1.27.1 \
   && ./cran_install.sh crosstalk 1.0.0 \
   && ./cran_install.sh purrr 0.2.2.2 \
   && ./cran_install.sh viridisLite 0.2.0 \
-  && ./cran_install.sh plotly 4.6.0
+  && ./cran_install.sh plotly 4.7.0
 
 ## install osmar
 RUN  ./cran_install.sh XML 3.98-1.7 \
