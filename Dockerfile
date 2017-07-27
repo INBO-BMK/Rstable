@@ -116,7 +116,7 @@ RUN  ./cran_install.sh registry 0.3 \
   && ./cran_install.sh doParallel 1.0.10 \
   && ./cran_install.sh NMF 0.20.6 \
   && ./cran_install.sh irlba 2.2.1 \
-  && ./cran_install.sh igraph 1.0.1
+  && ./cran_install.sh igraph 1.1.2
 
 ## install lintr and dependencies
 RUN  ./cran_install.sh stringdist 0.9.4.4 \
