@@ -149,9 +149,9 @@ RUN  ./cran_install.sh numDeriv 2016.8-1 \
 
 ## install INLA
 RUN  ./cran_install.sh MatrixModels 0.4-1 \
-  && wget https://github.com/inbo/INLA/archive/v0.0-1485844051.tar.gz \
-  && R CMD INSTALL v0.0-1485844051.tar.gz \
-  && rm v0.0-1485844051.tar.gz
+  && wget https://github.com/inbo/INLA/archive/v17.06.20.tar.gz \
+  && R CMD INSTALL v17.06.20.tar.gz \
+  && rm v17.06.20.tar.gz
 
 ## install roxygen2 and dependencies
 RUN apt-get update \
