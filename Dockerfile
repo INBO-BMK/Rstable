@@ -167,7 +167,7 @@ RUN apt-get update \
 RUN  ./cran_install.sh plogr 0.1-1 \
   && ./cran_install.sh RSQLite 2.0
 
-## install rmvtnorm
+## install mvtnorm
 RUN  ./cran_install.sh mvtnorm 1.0-6
 
 ## install snowfall
@@ -181,9 +181,9 @@ RUN apt-get update \
   && ./cran_install.sh rgeos 0.3-23
 
 ## install multimput
-RUN wget https://github.com/inbo/multimput/archive/v0.2.6.tar.gz \
-  && R CMD INSTALL v0.2.6.tar.gz \
-  && rm v0.2.6.tar.gz
+RUN wget https://github.com/inbo/multimput/archive/v0.2.7.tar.gz \
+  && R CMD INSTALL v0.2.7.tar.gz \
+  && rm v0.2.7.tar.gz
 
 ## install aws.s3
 RUN  ./cran_install.sh aws.signature 0.2.9 \
