@@ -199,7 +199,7 @@ RUN apt-get update \
 RUN  ./cran_install.sh pander 0.6.0
 
 ## install DT
-RUN  ./cran_install.sh htmlwidgets 0.8 \
+RUN  ./cran_install.sh htmlwidgets 0.9 \
   && ./cran_install.sh DT 0.2
 
 ## install plotly
