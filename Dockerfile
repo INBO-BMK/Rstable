@@ -145,7 +145,7 @@ RUN  ./cran_install.sh minqa 1.2.4 \
 ## install optimx and dependencies
 RUN  ./cran_install.sh numDeriv 2016.8-1 \
   && ./cran_install.sh optextras 2016-8.8 \
-  && ./cran_install.sh Rvmmin 2017-7.8 \
+  && ./cran_install.sh Rvmmin 2017-7.18 \
   && ./cran_install.sh Rcgmin 2013-2.21 \
   && ./cran_install.sh quadprog 1.5-5 \
   && ./cran_install.sh BB 2014.10-1 \
