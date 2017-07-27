@@ -165,7 +165,7 @@ RUN apt-get update \
 
 ## install RSQLite
 RUN  ./cran_install.sh plogr 0.1-1 \
-  && ./cran_install.sh RSQLite 1.1-2
+  && ./cran_install.sh RSQLite 2.0
 
 ## install rmvtnorm
 RUN  ./cran_install.sh mvtnorm 1.0-6
