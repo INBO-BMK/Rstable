@@ -193,7 +193,7 @@ RUN  ./cran_install.sh aws.signature 0.3.5 \
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     libpq-dev \
-  && ./cran_install.sh RPostgreSQL 0.4-1
+  && ./cran_install.sh RPostgreSQL 0.6-2
 
 ## install pander
 RUN  ./cran_install.sh pander 0.6.0
