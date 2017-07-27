@@ -169,7 +169,10 @@ RUN ./cran_install.sh xml2 1.1.1 \
   && ./cran_install.sh roxygen2 6.0.1
 
 ## install RSQLite
-RUN  ./cran_install.sh RSQLite 2.0
+RUN  ./cran_install.sh bit 1.1-12 \
+  && ./cran_install.sh bit64 0.9-7 \
+  && ./cran_install.sh blob 1.1.0 \
+  && ./cran_install.sh RSQLite 2.0
 
 ## install mvtnorm
 RUN  ./cran_install.sh mvtnorm 1.0-6
