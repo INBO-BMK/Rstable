@@ -186,8 +186,8 @@ RUN wget https://github.com/inbo/multimput/archive/v0.2.7.tar.gz \
   && rm v0.2.7.tar.gz
 
 ## install aws.s3
-RUN  ./cran_install.sh aws.signature 0.2.9 \
-  && ./cran_install.sh aws.s3 0.3.1
+RUN  ./cran_install.sh aws.signature 0.3.5 \
+  && ./cran_install.sh aws.s3 0.3.3
 
 ## install RPostgreSQL
 RUN apt-get update \
