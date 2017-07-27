@@ -90,7 +90,7 @@ RUN  ./cran_install.sh yaml 2.1.14 \
 
 ## Install covr and dependencies
 RUN  ./cran_install.sh rex 1.1.1 \
-  && ./cran_install.sh covr 2.2.2
+  && ./cran_install.sh covr 3.0.0
 
 ## Install ggplot2 and dependencies
 RUN  ./cran_install.sh colorspace 1.3-2 \
