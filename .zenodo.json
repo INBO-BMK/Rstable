@@ -1,0 +1,18 @@
+{
+ "creators": [
+      {
+        "name": "Thierry Onkelinx",
+        "affiliation": "Research Instute for Nature and Forest"
+      }
+    ],
+  "description": "RStable provides a versioned docker image with R and set of installed package with stable version. See the README for the full list of packages.",
+  "keywords": [
+    "docker",
+    "R",
+    "rlatex",
+    "reproducibility",
+    "containers"
+  ],
+  "license": "GPL-3",
+  "title": "rstable: Versioned docker image with R and a set of packages."
+}
