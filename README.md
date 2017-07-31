@@ -7,7 +7,7 @@
 [![](https://img.shields.io/docker/pulls/inbobmk/rstable.svg)](https://hub.docker.com/r/inbobmk/rstable)
 [![](https://img.shields.io/docker/automated/inbobmk/rstable.svg)](https://hub.docker.com/r/inbobmk/rstable/builds)
 
-A stable Docker image with R. The version of most software is hard-coded.
+A stable Docker image with R. The version of most software is hard-coded. Each tag points to a specific R version. We have two special tags: `latest` and `oldrel`. `latest` always points to the most recent R version available in RStable. `oldrel` points to the most recent R version in RStable from the previous major release. E.g. when `latest` points to `R 3.4.1`, `oldrel` will point to `R 3.3.3`.
 
 | Available software | Version         |
 | ------------------ | --------------- |
