@@ -9,9 +9,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.vcs-url="e.g. https://github.com/inbo/RStable" \
       org.label-schema.vendor="Research Institute for Nature and Forest" \
-
-## This handle reaches Thierry
-MAINTAINER "Thierry Onkelinx" thierry.onkelinx@inbo.be
+      maintainer="Thierry Onkelinx <thierry.onkelinx@inbo.be>"
 
 ## script to install specific R package from CRAN
 COPY cran_install.sh cran_install.sh
