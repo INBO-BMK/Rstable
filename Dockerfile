@@ -1,5 +1,15 @@
 FROM inbobmk/rlatex:3.4.1
 
+ARG BUILD_DATE
+ARG VCS_REF
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.name="RStable" \
+      org.label-schema.description="A docker image with stable versions of R and a bunch of package. The full list of packages is available in the README." \
+      org.label-schema.url="e.g. https://www.inbo.be/" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="e.g. https://github.com/inbo/RStable" \
+      org.label-schema.vendor="Research Institute for Nature and Forest" \
+
 ## This handle reaches Thierry
 MAINTAINER "Thierry Onkelinx" thierry.onkelinx@inbo.be
 
