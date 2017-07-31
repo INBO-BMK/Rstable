@@ -1,6 +1,11 @@
 # R-stable
 
-[![](https://images.microbadger.com/badges/version/inbobmk/rstable.svg)](http://microbadger.com/images/inbobmk/rstable "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/inbobmk/rstable.svg)](http://microbadger.com/images/inbobmk/rstable "Get your own image badge on microbadger.com")
+[![DOI](https://zenodo.org/badge/49820667.svg)](https://zenodo.org/badge/latestdoi/49820667)
+[![license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://raw.githubusercontent.com/inbo/RStable/master/LICENSE)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[![](https://images.microbadger.com/badges/image/inbobmk/rstable.svg)](https://microbadger.com/images/inbobmk/rstable)
+[![](https://img.shields.io/docker/pulls/inbobmk/rstable.svg)](https://hub.docker.com/r/inbobmk/rstable)
+[![](https://img.shields.io/docker/automated/inbobmk/rstable.svg)](https://hub.docker.com/r/inbobmk/rstable/builds)
 
 A stable Docker image with R. The version of most software is hard-coded.
 
