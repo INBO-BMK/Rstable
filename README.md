@@ -70,6 +70,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |          crosstalk |           1.0.0 | 
 |               curl |           2.8.1 | 
 |         data.table |          1.10.4 | 
+|             dbplyr |           1.1.0 | 
 |               desc |           1.1.0 | 
 |           devtools |          1.13.2 | 
 |            dfoptim |        2016.7-1 | 

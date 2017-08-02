@@ -247,5 +247,8 @@ RUN  ./cran_install.sh bookdown 0.4 \
   && ./cran_install.sh webshot 0.4.1 \
   && Rscript -e "webshot::install_phantomjs()"
 
+## install dbplyr
+RUN  ./cran_install.sh dbplyr 1.1.0
+
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]
