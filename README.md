@@ -77,7 +77,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |          dichromat |           2.0-0 | 
 |             digest |          0.6.12 | 
 |         doParallel |          1.0.10 | 
-|              dplyr |           0.7.2 | 
+|              dplyr |           0.7.3 | 
 |           evaluate |          0.10.1 | 
 |            foreach |           1.4.3 | 
 |            formatR |             1.5 | 

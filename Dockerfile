@@ -55,7 +55,7 @@ RUN  ./cran_install.sh Rcpp 0.12.12 \
   && ./cran_install.sh pkgconfig 2.0.1 \
   && ./cran_install.sh bindrcpp 0.2 \
   && ./cran_install.sh glue 1.1.1 \
-  && ./cran_install.sh dplyr 0.7.2
+  && ./cran_install.sh dplyr 0.7.3
 
 ## Install plyr
 RUN  ./cran_install.sh plyr 1.8.4
