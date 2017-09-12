@@ -131,7 +131,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |                rex |           1.1.1 | 
 |              rgdal |           1.2-8 | 
 |              rgeos |          0.3-23 | 
-|              rlang |             0.1 | 
+|              rlang |           0.1.2 | 
 |          rmarkdown |             1.6 | 
 |           rngtools |           1.2.4 | 
 |           roxygen2 |           6.0.1 | 
