@@ -150,7 +150,8 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |             svUnit |          0.7-12 | 
 |           testthat |           1.0.2 | 
 |             tibble |           1.3.3 | 
-|              tidyr |           0.6.3 | 
+|              tidyr |           0.7.2 | 
+|         tidyselect |           0.2.3 | 
 |             ucminf |           1.1-4 | 
 |        viridisLite |           0.2.0 | 
 |            webshot |           0.4.1 | 

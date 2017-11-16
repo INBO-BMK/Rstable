@@ -142,7 +142,8 @@ RUN  ./cran_install.sh stringdist 0.9.4.6 \
 RUN  ./cran_install.sh sp 1.2-5
 
 ## install tidyr
-RUN  ./cran_install.sh tidyr 0.6.3
+RUN  ./cran_install.sh tidyselect 0.2.3 \
+  && ./cran_install.sh tidyr 0.7.2
 
 ## install lme4
 RUN  ./cran_install.sh minqa 1.2.4 \
