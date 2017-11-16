@@ -250,5 +250,8 @@ RUN  ./cran_install.sh bookdown 0.4 \
 ## install dbplyr
 RUN  ./cran_install.sh dbplyr 1.1.0
 
+## install profvis
+RUN  ./cran_install.sh profvis 0.3.3
+
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]
