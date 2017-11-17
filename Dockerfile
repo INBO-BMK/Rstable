@@ -142,7 +142,8 @@ RUN  ./cran_install.sh stringdist 0.9.4.6 \
 RUN  ./cran_install.sh sp 1.2-5
 
 ## install tidyr
-RUN  ./cran_install.sh tidyselect 0.2.3 \
+RUN  ./cran_install.sh purrr 0.2.4 \
+  && ./cran_install.sh tidyselect 0.2.3 \
   && ./cran_install.sh tidyr 0.7.2
 
 ## install lme4
@@ -224,7 +225,6 @@ RUN  ./cran_install.sh httpuv 1.3.5 \
   && ./cran_install.sh shiny 1.0.5 \
   && ./cran_install.sh hexbin 1.27.1 \
   && ./cran_install.sh crosstalk 1.0.0 \
-  && ./cran_install.sh purrr 0.2.4 \
   && ./cran_install.sh viridisLite 0.2.0 \
   && ./cran_install.sh data.table 1.10.4-3 \
   && ./cran_install.sh plotly 4.7.1
