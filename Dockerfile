@@ -198,9 +198,9 @@ RUN apt-get update \
   && ./cran_install.sh rgeos 0.3-26
 
 ## install multimput
-RUN wget https://github.com/inbo/multimput/archive/v0.2.7.tar.gz \
-  && R CMD INSTALL v0.2.7.tar.gz \
-  && rm v0.2.7.tar.gz
+RUN wget https://github.com/inbo/multimput/archive/v0.2.7.9000.tar.gz \
+  && R CMD INSTALL v0.2.7.9000.tar.gz \
+  && rm v0.2.7.9000.tar.gz
 
 ## install aws.s3
 RUN  ./cran_install.sh aws.signature 0.3.5 \
