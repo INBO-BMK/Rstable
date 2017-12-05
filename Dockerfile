@@ -1,4 +1,4 @@
-FROM inbobmk/rlatex:3.4.2
+FROM inbobmk/rlatex:3.4.3
 
 ARG BUILD_DATE
 ARG VCS_REF
