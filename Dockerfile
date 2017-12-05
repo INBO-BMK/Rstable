@@ -111,6 +111,7 @@ RUN  ./cran_install.sh colorspace 1.3-2 \
   && ./cran_install.sh RColorBrewer 1.1-2 \
   && ./cran_install.sh dichromat 2.0-0 \
   && ./cran_install.sh labeling 0.3 \
+  && ./cran_install.sh viridisLite 0.2.0 \
   && ./cran_install.sh scales 0.5.0 \
   && ./cran_install.sh reshape2 1.4.2 \
   && ./cran_install.sh gtable 0.2.0 \
