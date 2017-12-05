@@ -29,7 +29,7 @@ RUN apt-get update \
   && ./cran_install.sh digest 0.6.12 \
   && ./cran_install.sh R6 2.2.2 \
   && ./cran_install.sh magrittr 1.5 \
-  && ./cran_install.sh stringi 1.1.5 \
+  && ./cran_install.sh stringi 1.1.6 \
   && ./cran_install.sh stringr 1.2.0 \
   && ./cran_install.sh openssl 0.9.9 \
   && ./cran_install.sh httr 1.3.1 \
@@ -44,7 +44,7 @@ RUN apt-get update \
 RUN  ./cran_install.sh assertthat 0.2.0
 
 ## Install dplyr and dependencies
-RUN  ./cran_install.sh Rcpp 0.12.13 \
+RUN  ./cran_install.sh Rcpp 0.12.14 \
   && ./cran_install.sh lazyeval 0.2.1 \
   && ./cran_install.sh DBI 0.7 \
   && ./cran_install.sh BH 1.65.0-1 \
@@ -87,7 +87,7 @@ RUN  ./cran_install.sh crayon 1.3.4 \
   && ./cran_install.sh testthat 1.0.2
 
 ## Install rmarkdown and dependencies
-RUN  ./cran_install.sh yaml 2.1.14 \
+RUN  ./cran_install.sh yaml 2.1.15 \
   && ./cran_install.sh evaluate 0.10.1 \
   && ./cran_install.sh formatR 1.5 \
   && ./cran_install.sh highr 0.6 \
@@ -97,9 +97,9 @@ RUN  ./cran_install.sh yaml 2.1.14 \
   && ./cran_install.sh caTools 1.17.1 \
   && ./cran_install.sh htmltools 0.3.6 \
   && ./cran_install.sh base64enc 0.1-3 \
-  && ./cran_install.sh backports 1.1.0 \
+  && ./cran_install.sh backports 1.1.1 \
   && ./cran_install.sh rprojroot 1.2 \
-  && ./cran_install.sh rmarkdown 1.7
+  && ./cran_install.sh rmarkdown 1.8
 
 ## Install covr and dependencies
 RUN  ./cran_install.sh rex 1.1.2 \
@@ -124,7 +124,7 @@ RUN  ./cran_install.sh xtable 1.8-2
 RUN  apt-get update \
   && apt-get install -y --no-install-recommends \
     libxml2-dev \
-  && ./cran_install.sh registry 0.3 \
+  && ./cran_install.sh registry 0.5 \
   && ./cran_install.sh pkgmaker 0.22 \
   && ./cran_install.sh rngtools 1.2.4 \
   && ./cran_install.sh gridBase 0.4-7 \
@@ -150,7 +150,7 @@ RUN  ./cran_install.sh purrr 0.2.4 \
 ## install lme4
 RUN  ./cran_install.sh minqa 1.2.4 \
   && ./cran_install.sh nloptr 1.0.4 \
-  && ./cran_install.sh RcppEigen 0.3.3.3.0 \
+  && ./cran_install.sh RcppEigen 0.3.3.3.1 \
   && ./cran_install.sh lme4 1.1-14
 
 ## install optimx and dependencies
@@ -242,11 +242,11 @@ RUN apt-get update \
     libgdal-dev \
     libproj-dev \
   && apt-get clean \
-  && ./cran_install.sh rgdal 1.2-15
+  && ./cran_install.sh rgdal 1.2-16
 
 ## install bookdown and webshot
 RUN  ./cran_install.sh bookdown 0.5 \
-  && ./cran_install.sh webshot 0.4.2 \
+  && ./cran_install.sh webshot 0.5.0 \
   && Rscript -e "webshot::install_phantomjs()"
 
 ## install dbplyr
