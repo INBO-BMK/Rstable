@@ -16,10 +16,8 @@ tmp2 <- rbind(
   rec,
   other
 )
-tmp2 <- head(tmp2)
 cat(
   "\n\n",
   sprintf("\n| %18s | %15s |", rownames(tmp2), tmp2[, "Version"]),
   "\n\n"
 )
-
