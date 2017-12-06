@@ -246,6 +246,8 @@ RUN apt-get update \
 
 ## install bookdown and webshot
 RUN  Rscript -e 'devtools::install_github("rstudio/bookdown@0d3e67c05066c32c8a371f0428f8bf7a7926b13e")' \
+  && ./cran_install.sh debugme 1.1.0 \
+  && ./cran_install.sh processx 2.0.0.1 \
   && ./cran_install.sh webshot 0.5.0 \
   && Rscript -e "webshot::install_phantomjs()"
 
