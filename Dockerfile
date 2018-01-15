@@ -26,7 +26,7 @@ RUN apt-get update \
   && ./cran_install.sh jsonlite 1.5 \
   && ./cran_install.sh mime 0.5 \
   && ./cran_install.sh curl 3.0 \
-  && ./cran_install.sh digest 0.6.12 \
+  && ./cran_install.sh digest 0.6.14 \
   && ./cran_install.sh R6 2.2.2 \
   && ./cran_install.sh magrittr 1.5 \
   && ./cran_install.sh stringi 1.1.6 \

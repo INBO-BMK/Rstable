@@ -76,7 +76,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |           devtools |          1.13.4 | 
 |            dfoptim |        2016.7-1 | 
 |          dichromat |           2.0-0 | 
-|             digest |          0.6.12 | 
+|             digest |          0.6.14 | 
 |         doParallel |          1.0.11 | 
 |              dplyr |           0.7.4 | 
 |           evaluate |          0.10.1 | 
