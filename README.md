@@ -109,7 +109,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |            memoise |           1.1.0 | 
 |               mime |             0.5 | 
 |              minqa |           1.2.4 | 
-|          multimput |      0.2.7.9000 | 
+|          multimput |         0.2.8.1 | 
 |            munsell |           0.4.3 | 
 |            mvtnorm |           1.0-6 | 
 |             nloptr |           1.0.4 | 
