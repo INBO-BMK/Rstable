@@ -11,9 +11,9 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 
 | Available software | Version         |
 | ------------------ | --------------- |
-|             Ubuntu |           16.04 | 
+|             Ubuntu |     16.04.4 LTS | 
 |               qpdf |           6.0.0 | 
-|             Pandoc |           2.0.4 | 
+|             pandoc |           2.1.3 | 
 |                  R |           3.4.4 | 
 |         KernSmooth |         2.23-15 | 
 |               MASS |          7.3-49 | 
