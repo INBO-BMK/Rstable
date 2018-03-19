@@ -11,9 +11,6 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vendor="Research Institute for Nature and Forest" \
       maintainer="Thierry Onkelinx <thierry.onkelinx@inbo.be>"
 
-## script to install specific R package from CRAN
-COPY cran_install.sh cran_install.sh
-
 ## Install devtools and dependencies
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
