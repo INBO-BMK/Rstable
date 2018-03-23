@@ -258,5 +258,9 @@ RUN  ./cran_install.sh dbplyr 1.2.1
 ## install profvis
 RUN  ./cran_install.sh profvis 0.3.5
 
+## install readr
+RUN  ./cran_install.sh hms 0.4.2 \
+  && ./cran_install.sh readr 1.1.1
+
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]

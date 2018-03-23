@@ -40,6 +40,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |                 R6 |           2.2.2 | 
 |       RColorBrewer |           1.1-2 | 
 |              RCurl |       1.95-4.10 | 
+|              RODBC |          1.3-15 | 
 |        RPostgreSQL |           0.6-2 | 
 |            RSQLite |             2.0 | 
 |             Rcgmin |       2013-2.21 | 
@@ -89,6 +90,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |             gtable |           0.2.0 | 
 |             hexbin |          1.27.2 | 
 |              highr |             0.6 | 
+|                hms |           0.4.2 | 
 |          htmltools |           0.3.6 | 
 |        htmlwidgets |             1.0 | 
 |             httpuv |         1.3.6.2 | 
@@ -129,6 +131,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |            profvis |           0.3.5 | 
 |              purrr |           0.2.4 | 
 |           quadprog |           1.5-5 | 
+|              readr |           1.1.1 | 
 |           registry |             0.5 | 
 |           reshape2 |           1.4.3 | 
 |                rex |           1.1.2 | 
@@ -143,6 +146,8 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |             scales |           0.5.0 | 
 |             setRNG |        2013.9-1 | 
 |              shiny |           1.0.5 | 
+|               snow |           0.4-2 | 
+|           snowfall |        1.84-6.1 | 
 |        sourcetools |           0.1.6 | 
 |                 sp |           1.2-7 | 
 |         stringdist |         0.9.4.7 | 
