@@ -262,5 +262,9 @@ RUN  ./cran_install.sh profvis 0.3.5
 RUN  ./cran_install.sh hms 0.4.2 \
   && ./cran_install.sh readr 1.1.1
 
+## install pool
+RUN  ./cran_install.sh later 0.7.1 \
+  && ./cran_install.sh pool 0.1.4
+
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]

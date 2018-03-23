@@ -101,6 +101,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |           jsonlite |             1.5 | 
 |              knitr |            1.20 | 
 |           labeling |             0.3 | 
+|              later |           0.7.1 | 
 |           lazyeval |           0.2.1 | 
 |              lintr |           1.0.2 | 
 |               lme4 |          1.1-15 | 
@@ -126,6 +127,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |              plogr |           0.1-1 | 
 |             plotly |           4.7.1 | 
 |               plyr |           1.8.4 | 
+|               pool |           0.1.4 | 
 |             praise |           1.0.0 | 
 |           processx |         2.0.0.1 | 
 |            profvis |           0.3.5 | 
