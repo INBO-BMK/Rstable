@@ -14,7 +14,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |             Ubuntu |     18.04.1 LTS | 
 |               qpdf |           8.0.2 | 
 |             pandoc |         2.2.3.2 | 
-|                  R |           3.5.0 | 
+|                  R |           3.5.1 | 
 |         KernSmooth |         2.23-15 | 
 |               MASS |          7.3-50 | 
 |             Matrix |          1.2-14 | 
