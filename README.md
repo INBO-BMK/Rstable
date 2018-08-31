@@ -11,25 +11,25 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 
 | Available software | Version         |
 | ------------------ | --------------- |
-|             Ubuntu |     16.04.4 LTS | 
-|               qpdf |           6.0.0 | 
-|             pandoc |           2.1.3 | 
-|                  R |           3.4.4 | 
+|             Ubuntu |     18.04.1 LTS | 
+|               qpdf |           8.0.2 | 
+|             pandoc |         2.2.3.2 | 
+|                  R |           3.5.0 | 
 |         KernSmooth |         2.23-15 | 
-|               MASS |          7.3-49 | 
-|             Matrix |          1.2-11 | 
+|               MASS |          7.3-50 | 
+|             Matrix |          1.2-14 | 
 |               boot |          1.3-20 | 
 |              class |          7.3-14 | 
-|            cluster |           2.0.6 | 
+|            cluster |         2.0.7-1 | 
 |          codetools |          0.2-15 | 
-|            foreign |          0.8-69 | 
+|            foreign |          0.8-70 | 
 |            lattice |         0.20-35 | 
-|               mgcv |          1.8-23 | 
-|               nlme |       3.1-131.1 | 
+|               mgcv |          1.8-24 | 
+|               nlme |         3.1-137 | 
 |               nnet |          7.3-12 | 
 |              rpart |          4.1-13 | 
 |            spatial |          7.3-11 | 
-|           survival |          2.41-3 | 
+|           survival |          2.42-6 | 
 |                 BB |       2014.10-1 | 
 |                 BH |        1.66.0-1 | 
 |                DBI |             0.8 | 
@@ -160,7 +160,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |             tibble |           1.4.2 | 
 |              tidyr |           0.8.0 | 
 |         tidyselect |           0.2.4 | 
-|            tinytex |             0.4 | 
+|            tinytex |             0.8 | 
 |             ucminf |           1.1-4 | 
 |               utf8 |           1.1.3 | 
 |        viridisLite |           0.3.0 | 
