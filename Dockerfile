@@ -129,6 +129,7 @@ RUN  apt-get update \
   && apt-get install -y --no-install-recommends \
     libxml2-dev \
   && ./cran_install.sh registry 0.5 \
+  && ./cran_install.sh bibtex 0.4.2 \
   && ./cran_install.sh pkgmaker 0.27 \
   && ./cran_install.sh rngtools 1.3.1 \
   && ./cran_install.sh gridBase 0.4-7 \
