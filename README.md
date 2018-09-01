@@ -36,6 +36,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |                 DT |             0.4 | 
 |               INLA |        18.07.12 | 
 |       MatrixModels |           0.4-1 | 
+|                NMF |          0.21.0 | 
 |                 R6 |           2.2.2 | 
 |       RColorBrewer |           1.1-2 | 
 |              RCurl |       1.95-4.11 | 
@@ -52,6 +53,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |      aws.signature |           0.4.4 | 
 |          backports |           1.1.2 | 
 |          base64enc |           0.1-3 | 
+|             bibtex |           0.4.2 | 
 |              bindr |           0.1.1 | 
 |           bindrcpp |           0.2.2 | 
 |                bit |          1.1-14 | 
@@ -126,6 +128,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |           pkgbuild |           1.0.0 | 
 |          pkgconfig |           2.0.2 | 
 |            pkgload |           1.0.0 | 
+|           pkgmaker |            0.27 | 
 |              plogr |           0.2.0 | 
 |             plotly |           4.8.0 | 
 |               plyr |           1.8.4 | 
@@ -146,6 +149,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |              rgeos |          0.3-28 | 
 |              rlang |           0.2.2 | 
 |          rmarkdown |            1.10 | 
+|           rngtools |           1.3.1 | 
 |           roxygen2 |           6.1.0 | 
 |          rprojroot |           1.3-2 | 
 |         rstudioapi |             0.7 | 
