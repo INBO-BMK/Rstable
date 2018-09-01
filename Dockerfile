@@ -14,9 +14,10 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 ## Install devtools and dependencies
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-    libcurl4-openssl-dev \
+    libcurl4-gnutls-dev \
     curl \
     git \
+    libgit2-dev \
     libssl-dev \
     libssh2-1-dev \
   && apt-get clean \
