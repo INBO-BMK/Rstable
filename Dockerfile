@@ -175,10 +175,12 @@ RUN  ./cran_install.sh later 0.7.4 \
   && ./cran_install.sh sourcetools 0.1.7 \
   && ./cran_install.sh shiny 1.1.0
 
+## install MatrixModels
+RUN  ./cran_install.sh MatrixModels 0.4-1
+
 ## install INLA
-RUN  ./cran_install.sh MatrixModels 0.4-1 \
-  && wget https://inla.r-inla-download.org/R/stable/src/contrib/INLA_18.07.12.tar.gz \
-  && R CMD INSTALL INLA_18.07.12.tar.gz \
+RUN  wget https://inla.r-inla-download.org/R/stable/src/contrib/INLA_18.07.12.tar.gz \
+  && R CMD INSTALL --clean --no-multiarch --without-keep.source --byte-compile --resave-data --compact-docs --no-demo INLA_18.07.12.tar.gz \
   && rm INLA_18.07.12.tar.gz
 
 ## install roxygen2 and dependencies
