@@ -87,7 +87,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |            formatR |             1.5 | 
 |          geosphere |           1.5-7 | 
 |            ggplot2 |           3.0.0 | 
-|              git2r |          0.23.0 | 
+|              git2r |     0.23.0.9000 | 
 |               glue |           1.3.0 | 
 |           gridBase |           0.4-7 | 
 |             gtable |           0.2.0 | 
