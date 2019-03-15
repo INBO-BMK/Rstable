@@ -119,6 +119,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |            mvtnorm |           1.0-8 | 
 |             nloptr |           1.0.4 | 
 |           numDeriv |        2016.8-1 | 
+|               odbc |           1.1.6 | 
 |            openssl |           1.0.2 | 
 |          optextras |        2016-8.8 | 
 |             optimx |        2013.8.7 | 
