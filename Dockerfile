@@ -278,8 +278,8 @@ RUN  ./cran_install.sh hms 0.4.2 \
 ## install pool
 RUN  ./cran_install.sh pool 0.1.4.1
 
-## Install development version of git2r
-RUN Rscript -e 'devtools::install_github("ThierryO/git2r@datarepos", dependencies = FALSE, upgrade_dependencies = FALSE, keep_source = FALSE)'
+## Install git2rdata
+RUN Rscript -e 'devtools::install_github("inbo/git2rdata@v0.0.3", dependencies = FALSE, upgrade_dependencies = FALSE, keep_source = FALSE)'
 
 ## install odbc
 RUN  ./cran_install.sh odbc 1.1.6
