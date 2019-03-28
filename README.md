@@ -49,7 +49,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |             Rvmmin |       2018-4.17 | 
 |                XML |       3.98-1.19 | 
 |            askpass |             1.1 | 
-|         assertthat |           0.2.0 | 
+|         assertthat |           0.2.1 | 
 |             aws.s3 |          0.3.12 | 
 |      aws.signature |           0.4.4 | 
 |          backports |           1.1.3 | 
