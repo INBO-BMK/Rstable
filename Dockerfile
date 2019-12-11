@@ -17,10 +17,6 @@ RUN ./cran_install.sh assertthat 0.2.1
 ## Install digest from CRAN
 RUN ./cran_install.sh digest 0.6.23
 
-## Install nlme from CRAN
-RUN ./cran_install.sh lattice 0.20-38 \
- && ./cran_install.sh nlme 3.1-143
-
 ## Install xtable from CRAN
 RUN ./cran_install.sh xtable 1.8-4
 
@@ -99,14 +95,11 @@ RUN ./cran_install.sh colorspace 1.4-1 \
  && ./cran_install.sh farver 2.0.1 \
  && ./cran_install.sh labeling 0.3 \
  && ./cran_install.sh lifecycle 0.1.0 \
- && ./cran_install.sh Matrix 1.2-18 \
  && ./cran_install.sh munsell 0.5.0 \
  && ./cran_install.sh plyr 1.8.5 \
  && ./cran_install.sh RColorBrewer 1.1-2 \
  && ./cran_install.sh viridisLite 0.3.0 \
  && ./cran_install.sh gtable 0.3.0 \
- && ./cran_install.sh MASS 7.3-51.4 \
- && ./cran_install.sh mgcv 1.8-31 \
  && ./cran_install.sh reshape2 1.4.3 \
  && ./cran_install.sh scales 1.1.0 \
  && ./cran_install.sh ggplot2 3.2.1
@@ -196,8 +189,7 @@ RUN ./cran_install.sh highr 0.8 \
 RUN ./cran_install.sh igraph 1.2.4.2
 
 ## Install lintr from CRAN
-RUN ./cran_install.sh codetools 0.2-16 \
- && ./cran_install.sh cyclocomp 1.1.0 \
+RUN ./cran_install.sh cyclocomp 1.1.0 \
  && ./cran_install.sh stringdist 0.9.5.5 \
  && ./cran_install.sh xmlparsedata 1.0.3 \
  && ./cran_install.sh lintr 2.0.0
@@ -209,8 +201,7 @@ RUN ./cran_install.sh sp 1.3-2
 RUN ./cran_install.sh tidyr 1.0.0
 
 ## Install lme4 from CRAN
-RUN ./cran_install.sh boot 1.3-23 \
- && ./cran_install.sh minqa 1.2.4 \
+RUN ./cran_install.sh minqa 1.2.4 \
  && ./cran_install.sh nloptr 1.2.1 \
  && ./cran_install.sh RcppEigen 0.3.3.7.0 \
  && ./cran_install.sh lme4 1.1-21

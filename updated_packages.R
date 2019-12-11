@@ -43,9 +43,11 @@ cran_packages %>%
       str_remove_all("\\s"),
     Dependency = ifelse(
       Dependency %in% c(
-        "R", "base", "compiler", "datasets", "graphics", "grDevices", "grid",
-        "methods", "parallel", "splines", "stats", "stats4", "tcltk", "tinytex",
-        "tools", "translations", "utils", "xfun"
+        "R", "base", "boot", "class", "cluster", "codetools", "compiler",
+        "datasets", "foreign", "graphics", "grDevices", "grid", "KernSmooth",
+        "lattice", "littler", "MASS", "Matrix", "methods", "mgcv", "nlme",
+        "nnet", "parallel", "splines", "stats", "stats4", "rpart", "spatial",
+        "survival", "tcltk", "tinytex", "tools", "translations", "utils", "xfun"
       ),
       "",
       Dependency
