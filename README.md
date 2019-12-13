@@ -71,7 +71,7 @@ A stable Docker image with R. The version of most software is hard-coded. Each t
 |             dbplyr |           1.4.2 | 
 |               desc |           1.2.0 | 
 |           devtools |           2.2.1 | 
-|             digest |          0.6.23 | 
+|             digest |        0.6.23.2 | 
 |              dplyr |           0.8.3 | 
 |           ellipsis |           0.3.0 | 
 |           evaluate |            0.14 | 

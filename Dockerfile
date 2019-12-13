@@ -132,6 +132,9 @@ RUN ./cran_install.sh ps 1.3.0 \
 ## Install remotes from CRAN
 RUN ./cran_install.sh remotes 2.1.0
 
+## Install development version of digest
+RUN Rscript -e 'remotes::install_github("eddelbuettel/digest@ee005b8a040b", dependencies = FALSE, upgrade = FALSE, keep_source = FALSE)'
+
 ## Install devtools from CRAN
 RUN ./cran_install.sh ini 0.3.1 \
  && ./cran_install.sh clipr 0.7.0 \
