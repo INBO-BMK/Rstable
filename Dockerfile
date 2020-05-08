@@ -1,4 +1,4 @@
-FROM inbobmk/rlatex:3.6.1
+FROM inbobmk/rlatex:4.0.0
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -15,15 +15,15 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 RUN ./cran_install.sh assertthat 0.2.1
 
 ## Install digest from CRAN
-RUN ./cran_install.sh digest 0.6.23
+RUN ./cran_install.sh digest 0.6.25
 
 ## Install xtable from CRAN
 RUN ./cran_install.sh xtable 1.8-4
 
 ## Install shiny from CRAN
-RUN ./cran_install.sh BH 1.69.0-1 \
- && ./cran_install.sh Rcpp 1.0.3 \
- && ./cran_install.sh rlang 0.4.2 \
+RUN ./cran_install.sh BH 1.72.0-3 \
+ && ./cran_install.sh Rcpp 1.0.4.6 \
+ && ./cran_install.sh rlang 0.4.6 \
  && ./cran_install.sh later 1.0.0 \
  && ./cran_install.sh magrittr 1.5 \
  && ./cran_install.sh R6 2.4.1 \
@@ -32,10 +32,10 @@ RUN ./cran_install.sh BH 1.69.0-1 \
  && ./cran_install.sh fastmap 1.0.1 \
  && ./cran_install.sh htmltools 0.4.0 \
  && ./cran_install.sh httpuv 1.5.2 \
- && ./cran_install.sh jsonlite 1.6 \
- && ./cran_install.sh mime 0.7 \
+ && ./cran_install.sh jsonlite 1.6.1 \
+ && ./cran_install.sh mime 0.9 \
  && ./cran_install.sh sourcetools 0.1.7 \
- && ./cran_install.sh shiny 1.4.0
+ && ./cran_install.sh shiny 1.4.0.2
 
 ## Install git2r apt-get dependencies
 RUN apt-get update \
@@ -46,13 +46,13 @@ RUN apt-get update \
   && apt-get clean
 
 ## Install git2r from CRAN
-RUN ./cran_install.sh git2r 0.26.1
+RUN ./cran_install.sh git2r 0.27.1
 
 ## Install purrr from CRAN
-RUN ./cran_install.sh purrr 0.3.3
+RUN ./cran_install.sh purrr 0.3.4
 
 ## Install yaml from CRAN
-RUN ./cran_install.sh yaml 2.2.0
+RUN ./cran_install.sh yaml 2.2.1
 
 ## Install covr apt-get dependencies
 RUN apt-get update \
@@ -69,45 +69,55 @@ RUN ./cran_install.sh sys 3.3 \
  && ./cran_install.sh lazyeval 0.2.2 \
  && ./cran_install.sh openssl 1.4.1 \
  && ./cran_install.sh httr 1.4.1 \
- && ./cran_install.sh rex 1.1.2 \
- && ./cran_install.sh withr 2.1.2 \
- && ./cran_install.sh covr 3.4.0
+ && ./cran_install.sh rex 1.2.0 \
+ && ./cran_install.sh withr 2.2.0 \
+ && ./cran_install.sh covr 3.5.0
 
 ## Install stringr from CRAN
-RUN ./cran_install.sh glue 1.3.1 \
- && ./cran_install.sh stringi 1.4.3 \
+RUN ./cran_install.sh glue 1.4.0 \
+ && ./cran_install.sh stringi 1.4.6 \
  && ./cran_install.sh stringr 1.4.0
 
 ## Install tibble from CRAN
-RUN ./cran_install.sh backports 1.1.5 \
- && ./cran_install.sh ellipsis 0.3.0 \
- && ./cran_install.sh fansi 0.4.0 \
- && ./cran_install.sh zeallot 0.1.0 \
- && ./cran_install.sh cli 2.0.0 \
+RUN ./cran_install.sh ellipsis 0.3.0 \
+ && ./cran_install.sh fansi 0.4.1 \
+ && ./cran_install.sh cli 2.0.2 \
  && ./cran_install.sh utf8 1.1.4 \
- && ./cran_install.sh vctrs 0.2.0 \
- && ./cran_install.sh pillar 1.4.2 \
+ && ./cran_install.sh vctrs 0.2.4 \
+ && ./cran_install.sh lifecycle 0.2.0 \
+ && ./cran_install.sh pillar 1.4.4 \
  && ./cran_install.sh pkgconfig 2.0.3 \
- && ./cran_install.sh tibble 2.1.3
+ && ./cran_install.sh tibble 3.0.1
 
 ## Install ggplot2 from CRAN
-RUN ./cran_install.sh colorspace 1.4-1 \
- && ./cran_install.sh farver 2.0.1 \
+RUN ./cran_install.sh backports 1.1.6 \
+ && ./cran_install.sh ps 1.3.2 \
+ && ./cran_install.sh processx 3.4.2 \
+ && ./cran_install.sh rprojroot 1.3-2 \
+ && ./cran_install.sh callr 3.4.3 \
+ && ./cran_install.sh desc 1.2.0 \
+ && ./cran_install.sh prettyunits 1.1.1 \
+ && ./cran_install.sh pkgbuild 1.0.8 \
+ && ./cran_install.sh rstudioapi 0.11 \
+ && ./cran_install.sh colorspace 1.4-1 \
+ && ./cran_install.sh evaluate 0.14 \
+ && ./cran_install.sh pkgload 1.0.2 \
+ && ./cran_install.sh praise 1.0.0 \
+ && ./cran_install.sh farver 2.0.3 \
  && ./cran_install.sh labeling 0.3 \
- && ./cran_install.sh lifecycle 0.1.0 \
  && ./cran_install.sh munsell 0.5.0 \
- && ./cran_install.sh plyr 1.8.5 \
  && ./cran_install.sh RColorBrewer 1.1-2 \
+ && ./cran_install.sh testthat 2.3.2 \
  && ./cran_install.sh viridisLite 0.3.0 \
  && ./cran_install.sh gtable 0.3.0 \
- && ./cran_install.sh reshape2 1.4.3 \
+ && ./cran_install.sh isoband 0.2.1 \
  && ./cran_install.sh scales 1.1.0 \
- && ./cran_install.sh ggplot2 3.2.1
+ && ./cran_install.sh ggplot2 3.3.0
 
 ## Install DT from CRAN
-RUN ./cran_install.sh crosstalk 1.0.0 \
+RUN ./cran_install.sh crosstalk 1.1.0.1 \
  && ./cran_install.sh htmlwidgets 1.5.1 \
- && ./cran_install.sh DT 0.10
+ && ./cran_install.sh DT 0.13
 
 ## Install roxygen2 apt-get dependencies
 RUN  apt-get update \
@@ -115,22 +125,16 @@ RUN  apt-get update \
     libxml2-dev
 
 ## Install roxygen2 from CRAN
-RUN ./cran_install.sh ps 1.3.0 \
- && ./cran_install.sh processx 3.4.1 \
- && ./cran_install.sh rprojroot 1.3-2 \
- && ./cran_install.sh callr 3.4.0 \
- && ./cran_install.sh desc 1.2.0 \
- && ./cran_install.sh prettyunits 1.0.2 \
- && ./cran_install.sh pkgbuild 1.0.6 \
- && ./cran_install.sh rstudioapi 0.10 \
+RUN ./cran_install.sh highr 0.8 \
+ && ./cran_install.sh markdown 1.1 \
  && ./cran_install.sh brew 1.0-6 \
  && ./cran_install.sh commonmark 1.7 \
- && ./cran_install.sh pkgload 1.0.2 \
- && ./cran_install.sh xml2 1.2.2 \
- && ./cran_install.sh roxygen2 7.0.2
+ && ./cran_install.sh knitr 1.28 \
+ && ./cran_install.sh xml2 1.3.2 \
+ && ./cran_install.sh roxygen2 7.1.0
 
 ## Install remotes from CRAN
-RUN ./cran_install.sh remotes 2.1.0
+RUN ./cran_install.sh remotes 2.1.1
 
 ## Install development version of digest
 RUN Rscript -e 'remotes::install_github("eddelbuettel/digest@ee005b8a040b", dependencies = FALSE, upgrade = FALSE, keep_source = FALSE)'
@@ -138,28 +142,26 @@ RUN Rscript -e 'remotes::install_github("eddelbuettel/digest@ee005b8a040b", depe
 ## Install devtools from CRAN
 RUN ./cran_install.sh ini 0.3.1 \
  && ./cran_install.sh clipr 0.7.0 \
- && ./cran_install.sh clisymbols 1.2.0 \
- && ./cran_install.sh evaluate 0.14 \
- && ./cran_install.sh fs 1.3.1 \
- && ./cran_install.sh gh 1.0.1 \
- && ./cran_install.sh praise 1.0.0 \
+ && ./cran_install.sh fs 1.4.1 \
+ && ./cran_install.sh gh 1.1.0 \
+ && ./cran_install.sh rematch2 2.1.2 \
  && ./cran_install.sh sessioninfo 1.1.1 \
  && ./cran_install.sh whisker 0.4 \
  && ./cran_install.sh xopen 1.0.0 \
  && ./cran_install.sh memoise 1.1.0 \
  && ./cran_install.sh rcmdcheck 1.3.3 \
  && ./cran_install.sh rversions 2.0.1 \
- && ./cran_install.sh testthat 2.3.1 \
- && ./cran_install.sh usethis 1.5.1 \
- && ./cran_install.sh devtools 2.2.1
+ && ./cran_install.sh usethis 1.6.1 \
+ && ./cran_install.sh devtools 2.3.0
 
 ## Install dplyr from CRAN
 RUN ./cran_install.sh plogr 0.2.0 \
- && ./cran_install.sh tidyselect 0.2.5 \
- && ./cran_install.sh dplyr 0.8.3
+ && ./cran_install.sh tidyselect 1.0.0 \
+ && ./cran_install.sh dplyr 0.8.5
 
 ## Install lubridate from CRAN
-RUN ./cran_install.sh lubridate 1.7.4
+RUN ./cran_install.sh generics 0.0.2 \
+ && ./cran_install.sh lubridate 1.7.8
 
 ## Install freetds apt-get
 RUN apt-get update \
@@ -182,36 +184,33 @@ RUN apt-get update \
 RUN ./cran_install.sh RODBC 1.3-16
 
 ## Install rmarkdown from CRAN
-RUN ./cran_install.sh highr 0.8 \
- && ./cran_install.sh markdown 1.1 \
- && ./cran_install.sh base64enc 0.1-3 \
- && ./cran_install.sh knitr 1.26 \
- && ./cran_install.sh rmarkdown 1.18
+RUN ./cran_install.sh base64enc 0.1-3 \
+ && ./cran_install.sh rmarkdown 2.1
 
 ## Install igraph from CRAN
-RUN ./cran_install.sh igraph 1.2.4.2
+RUN ./cran_install.sh igraph 1.2.5
 
 ## Install lintr from CRAN
 RUN ./cran_install.sh cyclocomp 1.1.0 \
- && ./cran_install.sh stringdist 0.9.5.5 \
  && ./cran_install.sh xmlparsedata 1.0.3 \
- && ./cran_install.sh lintr 2.0.0
+ && ./cran_install.sh lintr 2.0.1
 
 ## Install sp from CRAN
-RUN ./cran_install.sh sp 1.3-2
+RUN ./cran_install.sh sp 1.4-1
 
 ## Install tidyr from CRAN
-RUN ./cran_install.sh tidyr 1.0.0
+RUN ./cran_install.sh tidyr 1.0.3
 
 ## Install lme4 from CRAN
 RUN ./cran_install.sh minqa 1.2.4 \
- && ./cran_install.sh nloptr 1.2.1 \
+ && ./cran_install.sh nloptr 1.2.2.1 \
  && ./cran_install.sh RcppEigen 0.3.3.7.0 \
- && ./cran_install.sh lme4 1.1-21
+ && ./cran_install.sh statmod 1.4.34 \
+ && ./cran_install.sh lme4 1.1-23
 
 ## Install optimx from CRAN
 RUN ./cran_install.sh numDeriv 2016.8-1.1 \
- && ./cran_install.sh optimx 2018-7.10
+ && ./cran_install.sh optimx 2020-4.2
 
 ## Install MatrixModels from CRAN
 RUN ./cran_install.sh MatrixModels 0.4-1
@@ -222,14 +221,14 @@ RUN  wget https://inla.r-inla-download.org/R/stable/src/contrib/INLA_19.09.03.ta
   && rm INLA_19.09.03.tar.gz
 
 ## Install RSQLite from CRAN
-RUN ./cran_install.sh bit 1.1-14 \
+RUN ./cran_install.sh bit 1.1-15.2 \
  && ./cran_install.sh bit64 0.9-7 \
- && ./cran_install.sh blob 1.2.0 \
- && ./cran_install.sh DBI 1.0.0 \
- && ./cran_install.sh RSQLite 2.1.4
+ && ./cran_install.sh blob 1.2.1 \
+ && ./cran_install.sh DBI 1.1.0 \
+ && ./cran_install.sh RSQLite 2.2.0
 
 ## Install mvtnorm from CRAN
-RUN ./cran_install.sh mvtnorm 1.0-11
+RUN ./cran_install.sh mvtnorm 1.1-0
 
 ## Install snowfall from CRAN
 RUN ./cran_install.sh snow 0.4-3 \
@@ -248,7 +247,7 @@ RUN Rscript -e 'remotes::install_github("inbo/multimput@v0.2.9", dependencies = 
 
 ## Install aws.s3 from CRAN
 RUN ./cran_install.sh aws.signature 0.5.2 \
- && ./cran_install.sh aws.s3 0.3.12
+ && ./cran_install.sh aws.s3 0.3.21
 
 ## install RPostgreSQL apt-get dependencies
 RUN apt-get update \
@@ -263,14 +262,14 @@ RUN ./cran_install.sh pander 0.6.3
 
 ## Install plotly from CRAN
 RUN ./cran_install.sh data.table 1.12.8 \
- && ./cran_install.sh hexbin 1.28.0 \
- && ./cran_install.sh plotly 4.9.1
+ && ./cran_install.sh hexbin 1.28.1 \
+ && ./cran_install.sh plotly 4.9.2.1
 
 ## Install osmar from CRAN
 RUN ./cran_install.sh bitops 1.0-6 \
  && ./cran_install.sh geosphere 1.5-10 \
- && ./cran_install.sh RCurl 1.95-4.12 \
- && ./cran_install.sh XML 3.98-1.20 \
+ && ./cran_install.sh RCurl 1.98-1.2 \
+ && ./cran_install.sh XML 3.99-0.3 \
  && ./cran_install.sh osmar 1.1-7
 
 ## install rgdal apt-get dependencies
@@ -284,7 +283,7 @@ RUN apt-get update \
 RUN ./cran_install.sh rgdal 1.4-8
 
 ## Install bookdown from CRAN
-RUN ./cran_install.sh bookdown 0.16
+RUN ./cran_install.sh bookdown 0.18
 
 ## Install webshot from CRAN
 RUN ./cran_install.sh webshot 0.5.2
@@ -293,23 +292,23 @@ RUN ./cran_install.sh webshot 0.5.2
 RUN  Rscript -e "webshot::install_phantomjs()"
 
 ## Install dbplyr from CRAN
-RUN ./cran_install.sh dbplyr 1.4.2
+RUN ./cran_install.sh dbplyr 1.4.3
 
 ## Install profvis from CRAN
 RUN ./cran_install.sh profvis 0.3.6
 
 ## Install readr from CRAN
-RUN ./cran_install.sh hms 0.5.2 \
+RUN ./cran_install.sh hms 0.5.3 \
  && ./cran_install.sh readr 1.3.1
 
 ## Install pool from CRAN
 RUN ./cran_install.sh pool 0.1.4.3
 
 ## Install git2rdata from CRAN
-RUN ./cran_install.sh git2rdata 0.2.0
+RUN ./cran_install.sh git2rdata 0.2.1
 
 ## Install odbc from CRAN
-RUN ./cran_install.sh odbc 1.2.1
+RUN ./cran_install.sh odbc 1.2.2
 
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]
